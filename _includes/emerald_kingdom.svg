@@ -10,12 +10,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
-   width="2131"
-   height="3284"
    viewBox="0 0 2131 3284"
-   sodipodi:docname="Map_vector.svg"
-   inkscape:version="0.92.1 r15371"
-   class="terrain">
+   preserveAspectRatio="xMidYMid meet">
   <metadata>
     <rdf:RDF>
       <cc:Work
@@ -33,7 +29,7 @@
       stroke:#000000;
       fill-opacity:0.75;
     }
-    path:hover, g:hover path {
+    g:hover path {
       fill-opacity:1.0;
       stroke-width: 2px;
     }

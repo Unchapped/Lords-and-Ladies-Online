@@ -1,0 +1,104 @@
+---
+---
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Cinzel&family=Tangerine&display=swap');
+/* font-family: 'Cinzel', serif;
+font-family: 'Tangerine', cursive; 
+font-family: 'Crimson Text', serif;
+*/
+
+body {
+  width: 100%;
+  margin: 0px;
+  font-family: 'Crimson Text', serif;
+  min-height: 100vh;
+  color: black;
+}
+
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+h4, h5, h6 {
+  font-family: 'Tangerine', cursive;
+  margin: 0px;
+}
+
+h1 {font-size: 3em;}
+
+h4 {font-size: 1.5em;
+  img {height: 1em;}
+}
+
+/* page layout classes */
+#menu_box {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 38vw;
+  text-align: center;
+  padding: 1em;
+  &>div {
+    margin-top: 10px;
+    margin-left:auto;
+    margin-right:0;
+  }
+}
+
+svg {width: 100%;}
+
+#map_key {
+  display: grid;
+  grid-template-columns: auto auto;
+  h2 {grid-column: 1 / span 2;}
+  h4 {text-align: left;}
+
+}
+
+#trade_goods {
+  width: 35vw;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  /* grid-auto-flow: column; TODO: fix this */
+  h2 {grid-column: 1 / span 3;}
+  h4 {text-align: left;}
+}
+
+#noble_houses {
+  width: 30vw;
+  .list {
+    height: 70vw;
+    overflow-x:hidden;
+    overflow-y:auto;
+  }
+}
+
+.house {
+  display: grid;
+  grid-template-columns: auto 28% 28% 28%;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+    "logo name motto motto"
+    "logo player player race";
+  .heraldry{grid-area: logo;}
+  .player{grid-area: player;}
+  .race{grid-area: race;}
+  h3{grid-area: name;}
+  h4{grid-area: motto;}
+
+  margin: 10px;
+  text-align: left;
+
+}
+/*
+p, ul, ol, table, pre, dl {
+  margin:0 0 20px;
+}
+
+li{
+  p, ul, ol {
+    margin: 0px;
+  }
+}
+*/

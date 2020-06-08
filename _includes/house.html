@@ -1,0 +1,108 @@
+{% assign house = include.content %}
+<div class="house" id="{{house.name}}">
+    <i class="fas fa-shield-alt fa-3x heraldry"></i>
+    <h3>{{house.name}}</h3>
+    <h4>"{{house.motto}}"</h4>
+    <span class="player">{% if house.player!="NPC" %}<i class="fas fa-user"> </i> {{house.player}}{% else %}<i class="fas fa-robot"></i> NPC{% endif %}</span>
+    <span class="race"><i class="fas fa-flag"></i> {{house.race}}</span>
+    <!--
+    <div class="subtitle">
+        {{monster.size}} {{monster.type}} {% if monster.subtype != "" %}({{monster.subtype}}){% endif %} - {{monster.alignment}}
+    </div>
+    <div class="points">
+        <table><tr>
+            <td>CR {{monster.challenge_rating}}</td>
+            <td><i class="far fa-heart"></i> {{monster.hit_points}}</td>
+            <td><i class="fas fa-shield-alt"></i> {{monster.armor_class}} {% if monster.armor_desc %}({{monster.armor_desc}}){% endif %}</td>
+        </tr><tr>
+            <td colspan="3"><i class="fas fa-rabbit-fast"></i> {{monster.speed}}</td>
+        </tr></table>
+    </div>
+    <div class="stats">
+        {% assign STR = monster.strength | minus: 10 | divided_by: 2 %}
+        {% assign DEX = monster.dexterity | minus: 10 | divided_by: 2 %}
+        {% assign CON = monster.constitution | minus: 10 | divided_by: 2 %}
+        {% assign INT = monster.intelligence | minus: 10 | divided_by: 2 %}
+        {% assign WIS = monster.wisdom | minus: 10 | divided_by: 2 %}
+        {% assign CHA = monster.charisma | minus: 10 | divided_by: 2 %}
+
+        <table>
+            <tr><th>STR</th><th>DEX</th><th>CON</th><th>INT</th><th>WIS</th><th>CHA</th></tr>
+            <tr>
+                <td>{{monster.strength}} ({% if STR >= 0 %}+{% endif %}{{STR}})</td>
+                <td>{{monster.dexterity}} ({% if DEX >= 0 %}+{% endif %}{{DEX}})</td>
+                <td>{{monster.constitution}} ({% if CON >= 0 %}+{% endif %}{{CON}})</td>
+                <td>{{monster.intelligence}} ({% if INT >= 0 %}+{% endif %}{{INT}})</td>
+                <td>{{monster.wisdom}} ({% if WIS >= 0 %}+{% endif %}{{WIS}})</td>
+                <td>{{monster.charisma}} ({% if CHA >= 0 %}+{% endif %}{{CHA}})</td>
+            </tr>
+        </table>
+    </div>
+    <div class="attributes">
+        <dt>Senses:</dt><dd>{{monster.senses}}</dd>
+        <br/><dt>Languages:</dt><dd>{{monster.languages}}</dd>
+        <br/><dt>Skills:</dt><dd>
+            {% if monster.athletics %}Athletics +{{monster.athletics}},{% endif %}
+            {% if monster.acrobatics %}Acrobatics +{{monster.acrobatics}},{% endif %}
+            {% if monster.sleight_of_hand %}Sleight of Hand +{{monster.sleight_of_hand}},{% endif %}
+            {% if monster.stealth %}Stealth +{{monster.stealth}},{% endif %}
+            {% if monster.arcana %}Arcana +{{monster.arcana}},{% endif %}
+            {% if monster.history %}History +{{monster.history}},{% endif %}
+            {% if monster.investigation %}Investigation +{{monster.investigation}},{% endif %}
+            {% if monster.insight %}Insight +{{monster.insight}},{% endif %}
+            {% if monster.nature %}Nature +{{monster.nature}},{% endif %}
+            {% if monster.religion %}Religion +{{monster.religion}},{% endif %}
+            {% if monster.animal_handling %}Animal Handling +{{monster.animal_handling}},{% endif %}
+            {% if monster.insight %}Insight +{{monster.insight}},{% endif %}
+            {% if monster.medicine %}Medicine +{{monster.medicine}},{% endif %}
+            {% if monster.perception %}Perception +{{monster.perception}}{% endif %}
+            {% if monster.survival %}Survival +{{monster.survival}}{% endif %}
+            {% if monster.deception %}Deception +{{monster.deception}}{% endif %}
+            {% if monster.intimidation %}Intimidation +{{monster.intimidation}}{% endif %}
+            {% if monster.performance %}Performance +{{monster.performance}}{% endif %}
+            {% if monster.persuasion %}Persuasion +{{monster.persuasion}}{% endif %}
+        </dd>
+        {% if monster.strength_save or monster.dexterity_save or monster.constitution_save or monster.intelligence_save or monster.wisdom_save or monster.charisma_save %}
+            <br/><dt>Saving Throws:</dt><dd>
+                {% if monster.strength_save %} STR +{{monster.strength_save}},{% endif %}
+                {% if monster.dexterity_save %} DEX +{{monster.dexterity_save}},{% endif %}
+                {% if monster.constitution_save %} CON +{{monster.constitution_save}},{% endif %}
+                {% if monster.intelligence_save %} INT +{{monster.intelligence_save}},{% endif %}
+                {% if monster.wisdom_save %} WIS +{{monster.wisdom_save}},{% endif %}
+                {% if monster.charisma_save %} CHA +{{monster.charisma_save}}{% endif %}
+            </dd> 
+        {% endif %}
+        {% if monster.damage_vulnerabilities != "" %}<br/><dt>Dmg Vulnerabilities:</dt><dd>{{monster.damage_vulnerabilities}}</dd> {% endif %}
+        {% if monster.damage_resistances != "" %}<br/><dt>Dmg Resistances:</dt><dd>{{monster.damage_resistances}}</dd> {% endif %}
+        {% if monster.damage_immunities != "" %}<br/><dt>Dmg Immunities:</dt><dd>{{monster.damage_immunities}}</dd> {% endif %}
+        {% if monster.condition_immunities != "" %}<br/><dt>Condition Immunities:</dt><dd>{{monster.condition_immunities}}</dd> {% endif %}
+    </div>
+    {% if monster.special_abilities %}
+    <div class="abilities"><h2>Abilities</h2>
+    {% for ability in monster.special_abilities %}
+        <dt>{{ability.name}}</dt><dd>{{ability.desc | | newline_to_br}}</dd>
+    </div><div class="abilities">
+    {% endfor %}
+    </div>
+    {% endif %}
+    {% if monster.actions %}
+    <div class="actions"><h2>Actions</h2>
+        {% for action in monster.actions %}
+            <dt>{{action.name}}</dt><dd>{{action.desc}}</dd>
+        </div><div class="actions">
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% if monster.legendary_actions %}
+        <div class="legendary">
+            <h2>Legendary Actions</h2>
+            {{monster.legendary_desc}}
+        </div>
+        {% for action in monster.legendary_actions %}
+        <div class="legendary">
+            <dt>{{action.name}}</dt><dd>{{action.desc}}</dd>
+        </div>
+        {% endfor %}
+    {% endif %}
+-->
+</div>
