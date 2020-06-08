@@ -46,7 +46,23 @@ h4 {font-size: 1.5em;
   }
 }
 
-svg {width: 100%;}
+body>svg {
+  width: 100%;
+
+  path {
+    stroke:#000000;
+    fill-opacity:0.75;
+  }
+
+  g:hover path {
+    fill-opacity:1.0;
+    stroke-width: 2px;
+  }
+  
+  .mountain {fill:#333333}
+  .water {fill:#00ffff}
+  .land {fill:#aaaaaa}
+}
 
 #map_key {
   display: grid;
