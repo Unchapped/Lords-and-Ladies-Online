@@ -1,7 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Svg Vector Icons : http://www.onlinewebfonts.com/icon -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
-<metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
-<g><path d="M990,285.6v-61.3H10v61.3h122.5v122.5H10v367.5h122.5c0-135.3,164.5-245,367.5-245s367.5,109.7,367.5,245H990V408.1h-61.3V285.6H990z M193.7,408.1V285.6h122.5v122.5H193.7z M377.5,408.1V285.6H500v122.5H377.5z M561.3,408.1V285.6h122.5v122.5H561.3z M867.5,408.1H745V285.6h122.5V408.1z"/></g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   id="svg8">
+  <!-- <symbol id="bridge" width="512" height="512" viewBox="0 0 512 512">
+  <title>bridge</title> 
+  <desc>bridge</desc> -->
+  <path
+     d="M 256,109.07359 0,220.04035 V 391.1127 H 86.650391 A 170,157.20213 0 0 1 256,245.932 170,157.20213 0 0 1 425.45508,391.1127 H 512 V 220.04035 Z m -8.17969,18.93788 v 39.70931 l -29.35547,12.69218 V 140.7063 Z m 16.40821,0 29.35546,12.69483 v 39.70666 l -29.35546,-12.69218 z m -67.7793,22.21397 v 39.70929 l -29.35547,12.6922 v -39.70667 z m 119.15234,0 29.35352,12.69482 v 39.70667 l -29.35352,-12.6922 z M 145.07617,172.4394 v 39.7093 l -29.35351,12.69218 v -39.70665 z m 221.89649,0 29.35351,12.69483 v 39.70665 L 366.97266,212.1487 Z M 93.705078,194.65335 v 41.56927 l -29.353516,12.69483 v -41.56927 z m 324.638672,0 29.35547,12.69483 v 41.56927 L 418.34375,236.22262 Z M 42.333984,216.86731 v 40.33017 l -29.355468,12.6922 v -40.32754 z m 427.380856,0 29.35547,12.69483 v 40.32754 l -29.35547,-12.6922 z"
+     id="path63" />
+	<!-- </symbol>
+ 	<use href="#bridge" /> -->
 </svg>
