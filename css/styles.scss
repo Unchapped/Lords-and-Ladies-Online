@@ -12,6 +12,10 @@ body {
   font-family: 'Crimson Text', serif;
   min-height: 100vh;
   color: black;
+  /* background-image: url("../images/old_paper_texture.svg"); */
+  /* <a href="https://www.vecteezy.com/free-vector/old-paper">Old Paper Vectors by Vecteezy</a> */
+  background-image: url("../images/grunge_texture.svg");
+  /* <a href="https://www.vecteezy.com/free-vector/old-paper">Old Paper Vectors by Vecteezy</a> */
 }
 
 h1, h2, h3 {
@@ -46,10 +50,14 @@ h4 {font-size: 1.5em;
   }
 }
 
+path {
+    stroke:#000000;
+}
+
 body>svg {
   width: 100%;
 
-  path {
+  g path {
     stroke:#000000;
     fill-opacity:0.75;
   }
@@ -58,16 +66,18 @@ body>svg {
     fill-opacity:1.0;
     stroke-width: 2px;
   }
-  
-  .mountain {fill:#333333}
-  .water {fill:#00ffff}
-  .land {fill:#aaaaaa}
-}
+}  
+  .mountain {fill:darkgrey}
+  .sea {fill:steelblue;}
+  .river {fill:lightseagreen}
+  .land {fill:darkkhaki}
+  /* .bridge {fill:saddlebrown} */
+
 
 #map_key {
   display: grid;
-  grid-template-columns: auto auto;
-  h2 {grid-column: 1 / span 2;}
+  grid-template-columns: auto auto auto;
+  h2 {grid-column: 1 / span 3;}
   h4 {text-align: left;}
 
 }

@@ -23,11 +23,12 @@
       <div id="map_key">
         <h2>Map Key</h2>
         <h4><i class="fab fa-fort-awesome"></i> Stronghold (Levy Troops)</h4>
-        <h4><img src="images/barrel.svg" /> <!-- CC BY 3.0 - https://game-icons.net/1x1/delapouite/barrel.html --> Stockpile (Army Supply)</h4>
+        <h4><svg class="svg-inline--fa fa-crown fa-w-20" viewBox="0 0 512 512" ><use href="#barrel" /></svg> Stockpile (Army Supply)</h4>
         <h4><i class="fas fa-crown"></i> Palace (Cultural Prestige)</h4>
-        <h4><img src="images/bridge.svg" /><!-- Icon made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed by CC BY 3.0 --> Bridge (Connects Provinces over Water)</h4>
+        <h4><svg class="svg-inline--fa fa-crown fa-w-20" viewBox="0 0 512 512" ><use href="#bridge" /></svg> Bridge (Connects Provinces over Water)</h4>
         <h4><i class="fas fa-mountain"></i> Mountains (Impassible)</h4>
-        <h4><img src="images/blob.svg" /> River (Impassible)</h4>
+        <h4><svg class="svg-inline--fa fa-crown fa-w-20" viewBox="0 0 512 512" ><use href="#blob" class="sea"/></svg> Sea / Estuary (Navigable)</h4>
+        <h4><svg class="svg-inline--fa fa-crown fa-w-20" viewBox="0 0 512 512" ><use href="#blob" class="river"/></svg> Lake / River (Impassible)</h4>
       </div>
       <div id="trade_goods">
         <h2>Trade Goods</h2>
@@ -51,6 +52,7 @@
         </div>
       </div>
     </div>
+    {% include symbols.svg %}
   </body>
 <script>
     /* $(function() {
