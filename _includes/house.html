@@ -1,6 +1,8 @@
 {% assign house = include.content %}
+{% if house.active %}
 <div class="house" id="{{house.name}}">
-    <i class="fas fa-shield-alt fa-3x heraldry"></i>
+    <!-- <i class="fas fa-shield-alt fa-3x heraldry"></i> -->
+    <span class="heraldry"><img src = "images/houses/{{house.name}}.png" /></span>
     <h3>{{house.name}}</h3>
     <h4>"{{house.motto}}"</h4>
     <span class="player">{% if house.player!="NPC" %}<i class="fas fa-user"> </i> {{house.player}}{% else %}<i class="fas fa-robot"></i> NPC{% endif %}</span>
@@ -106,3 +108,4 @@
     {% endif %}
 -->
 </div>
+{% endif %}

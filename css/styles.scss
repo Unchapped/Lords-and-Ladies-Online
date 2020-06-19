@@ -107,7 +107,12 @@ body>svg {
   grid-template-areas: 
     "logo name motto motto"
     "logo player player race";
-  .heraldry{grid-area: logo;}
+
+  .heraldry {
+    text-align: center;
+    grid-area: logo;
+    img{height: 3em;}
+  }
   .player{grid-area: player;}
   .race{grid-area: race;}
   h3{grid-area: name;}
