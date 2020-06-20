@@ -144,7 +144,7 @@ image.heraldry {
 }
 
 .acosta .land{
-  fill: darkred;
+  fill: red;
   stroke: white;
 }
 
@@ -153,14 +153,39 @@ image.heraldry {
   stroke: black;
 }
 
+.ashton .land{
+  fill: red;
+  stroke: gold;
+}
+
 .aurelii .land{
   fill: gold;
   stroke: indigo;
 }
 
-.burke .land{
-  fill: darkred;
+.baleen .land{
+  fill: royalblue;
   stroke: white;
+}
+
+.barrett .land{
+  fill: red;
+  stroke: white;
+}
+
+.boeing .land{
+  fill: red;
+  stroke: white;
+}
+
+.burke .land{
+  fill: red;
+  stroke: white;
+}
+
+.capehart .land{
+  fill: gold;
+  stroke: red;
 }
 
 .carkeek .land{
@@ -168,14 +193,61 @@ image.heraldry {
   stroke: forestgreen;
 }
 
+.corvus .land{
+  fill: black;
+  stroke: white;
+  text {fill: white;}
+}
+
+.dravus .land{
+  fill: black;
+  stroke: gold;
+  text {fill: white;}
+}
+
+.elliott .land{
+  fill: royalblue;
+  stroke: white;
+}
+
+.fairwood .land{
+  fill: gold;
+  stroke: black;
+}
+
+.forrester .land{
+  fill: forestgreen;
+  stroke: black;
+}
+
 .genesee .land{
   fill: purple;
   stroke: gold;
 }
 
-.inverness .land{
-  fill: darkred;
+.highline .land{
+  fill: red;
   stroke: gold;
+}
+
+.ilono .land{
+  fill: gold;
+  stroke: indigo;
+}
+
+.inverness .land{
+  fill: red;
+  stroke: gold;
+}
+
+.jackson .land{
+  fill: forestgreen;
+  stroke: gold;
+}
+
+.james .land{
+  fill: indigo;
+  stroke: white;
 }
 
 .kellogg .land{
@@ -183,9 +255,16 @@ image.heraldry {
   stroke: gold;
 }
 
-.jackson .land{
-  fill: forestgreen;
-  stroke: gold;
+
+.lawton .land{
+  fill: white;
+  stroke: black;
+}
+
+.macadam .land{
+  fill: black;
+  stroke: red;
+  text {fill: white;}
 }
 
 .magnuson .land{
@@ -196,6 +275,11 @@ image.heraldry {
 .mercer .land{
   fill: purple;
   stroke: gold;
+}
+
+.penrose .land{
+  fill: white;
+  stroke: red;
 }
 
 .sande .land{
@@ -219,6 +303,11 @@ image.heraldry {
 }
 
 .suzallo .land{
+  fill: purple;
+  stroke: white;
+}
+
+.washburne .land{
   fill: purple;
   stroke: white;
 }

@@ -40,7 +40,17 @@
 		"kingdom":"",
 		"active":true
 	},
-	{"name":"Ashton", "player":"NPC", "race":"Magnol", "gold":0, "motto":"Born of Fire", "seat":"null", "territories":[], "kingdom":"", "active":true},
+	{
+		"name":"Ashton",
+		"player":"NPC",
+		"race":"Magnol",
+		"gold":0,
+		"motto":"Born of Fire",
+		"seat":"ashton_hall",
+		"territories":["ashton_hall"],
+		"kingdom":"",
+		"active":true
+	},
 	{
 		"name":"Aurelii",
 		"player":"Max McCall",
@@ -60,10 +70,55 @@
 		"kingdom":"",
 		"active":true
 	},
-	{"name":"Baleen", "player":"Zakariya Dehlawi", "race":"Lucian", "gold":4, "motto":"The Pack is the Wolf's Strength", "seat":"null", "territories":[], "kingdom":"", "active":true},
-	{"name":"Barrett", "player":"NPC", "race":"Magnol", "gold":0, "motto":"Hew to the True", "seat":"null", "territories":[], "kingdom":"", "active":true},
+	{
+		"name":"Baleen",
+		"player":"Zakariya Dehlawi",
+		"race":"Lucian",
+		"gold":4,
+		"motto":"The Pack is the Wolf's Strength",
+		"seat":"seahurst",
+		"territories":[
+			"seahurst",
+			"sunnydale",
+			"gregory_heights",
+			"five_corners",
+			"dragons_landing",
+			"normandy_park",
+			"edgecliff",
+			"arrow_lakes",
+			"angle_lake"
+
+		],
+		"kingdom":"",
+		"active":true
+	},
+	{
+		"name":"Barrett", 
+		"player":"NPC", 
+		"race":"Magnol", 
+		"gold":0, 
+		"motto":"Hew to the True", 
+		"seat":"the_bluffs",
+		"territories":["the_bluffs"],
+		"kingdom":"",
+		"active":true
+	},
 	{"name":"Bitter", "player":"NPC", "race":"Magnol", "gold":0, "motto":"The Proud Die the Same", "seat":"null", "territories":[], "kingdom":"", "active":false},
-	{"name":"Boeing", "player":"NPC", "race":"Rio", "gold":0, "motto":"Boldly going where angels fear to tread", "seat":"null", "territories":[], "kingdom":"", "active":true},
+	{
+		"name":"Boeing",
+		"player":"NPC",
+		"race":"Rio",
+		"gold":0,
+		"motto":"Boldly going where angels fear to tread",
+		"seat":"the_landing",
+		"territories":[
+			"the_landing",
+			"liberty_park",
+			"the_eastern_highlands"
+		],
+		"kingdom":"",
+		"active":true
+	},
 	{
 		"name":"Burke", 
 		"player":"NPC", 
@@ -95,13 +150,99 @@
 		"kingdom":"",
 		"active":true
 	},
-	{"name":"Capehart", "player":"NPC", "race":"Magnol", "gold":0, "motto":"Cross at your Peril", "seat":"null", "territories":[], "kingdom":"", "active":true},
+	{
+		"name":"Capehart",
+		"player":"NPC",
+		"race":"Magnol",
+		"gold":0,
+		"motto":"Cross at your Peril",
+		"seat":"west_point",
+		"territories":["west_point"],
+		"kingdom":"",
+		"active":true
+	},
 	{"name":"Channon", "player":"NPC", "race":"Lagante", "gold":0, "motto":"Standing Strong", "seat":"null", "territories":[], "kingdom":"", "active":false},
-	{"name":"Corvus", "player":"Charles Cadwallader", "race":"Magnol", "gold":5, "motto":"Deeds, not Words", "seat":"null", "territories":[], "kingdom":"", "active":true},
-	{"name":"Dravus", "player":"NPC", "race":"Magnol", "gold":0, "motto":"Pride Must be Earned", "seat":"null", "territories":[], "kingdom":"", "active":true},
-	{"name":"Elliott", "player":"NPC", "race":"Rio", "gold":0, "motto":"Sound and Fury", "seat":"null", "territories":[], "kingdom":"", "active":true},
-	{"name":"Fairwood", "player":"NPC", "race":"Rio", "gold":0, "motto":"Fortune Favors the Well-Prepared", "seat":"null", "territories":[], "kingdom":"", "active":true},
-	{"name":"Forrester", "player":"Spencer Peerson", "race":"Lagante", "gold":1, "motto":"The Day Sows; The Night Reaps", "seat":"null", "territories":[], "kingdom":"", "active":true},
+	{
+		"name":"Corvus",
+		"player":"Charles Cadwallader",
+		"race":"Magnol",
+		"gold":5,
+		"motto":"Deeds, not Words",
+		"seat":"admiral_heights",
+		"territories":[
+			"alki",
+			"admiral_heights",
+			"youngstown",
+			"gatewood",
+			"solstice",
+			"fauntleroy",
+			"endolyne"
+		],
+		"kingdom":"",
+		"active":true
+	},
+	{
+		"name":"Dravus",
+		"player":"NPC",
+		"race":"Magnol",
+		"gold":0,
+		"motto":"Pride Must be Earned",
+		"seat":"twixtbay",
+		"territories":[
+			"twixtbay",
+			"kinnear"
+		],
+		"kingdom":"",
+		"active":true
+	},
+	{
+		"name":"Elliott",
+		"player":"NPC",
+		"race":"Rio",
+		"gold":0,
+		"motto":"Sound and Fury",
+		"seat":"hamilton",
+		"territories":[
+			"hamilton",
+			"fairmount"
+		],
+		"kingdom":"",
+		"active":true
+	},
+	{
+		"name":"Fairwood",
+		"player":"NPC",
+		"race":"Rio", "gold":0,
+		"motto":"Fortune Favors the Well-Prepared",
+		"seat":"fairwood",
+		"territories":[
+			"cedar_river",
+			"cedar_grove",
+			"fairwood"
+		],
+		"kingdom":"",
+		"active":true
+	},
+	{
+		"name":"Forrester",
+		"player":"Spencer Peerson",
+		"race":"Lagante",
+		"gold":1,
+		"motto":"The Day Sows; The Night Reaps",
+		"seat":"garrison_creek",
+		"territories":[
+			"crystal_springs",
+			"southgate",
+			"oaksdale",
+			"garrison_creek",
+			"three_friends",
+			"andover_park",
+			"orillia",
+			"emerald_downs"
+		],
+		"kingdom":"",
+		"active":true
+	},
 	{
 		"name":"Genesee",
 		"player":"NPC",
@@ -113,8 +254,37 @@
 		"kingdom":"",
 		"active":true
 	},
-	{"name":"Highline", "player":"NPC", "race":"Magnol", "gold":0, "motto":"A Cut Above", "seat":"null", "territories":[], "kingdom":"", "active":true},
-	{"name":"Ilono", "player":"Alex West",  "race":"Lucian", "gold":6, "motto":"Our Light. Our Might. Our Right.", "seat":"null", "territories":[], "kingdom":"", "active":true},
+	{
+		"name":"Highline",
+		"player":"NPC",
+		"race":"Magnol",
+		"gold":0,
+		"motto":"A Cut Above",
+		"seat":"highline",
+		"territories":[
+			"highline",
+			"evansville"
+		],
+		"kingdom":"",
+		"active":true
+	},
+	{
+		"name":"Ilono",
+		"player":"Alex West", 
+		"race":"Lucian", "gold":6,
+		"motto":"Our Light. Our Might. Our Right.",
+		"seat":"crystal_quarry",
+		"territories":[
+			"roxbury_heights",
+			"inglesea",
+			"crystal_quarry",
+			"riverton_heights",
+			"duwamish_flats",
+			"fosters_field"
+		],
+		"kingdom":"",
+		"active":true
+	},
 	{
 		"name":"Inverness", 
 		"player":"NPC", 
@@ -143,7 +313,20 @@
 		"kingdom":"",
 		"active":true
 	},
-	{"name":"James", "player":"NPC", "race":"Lagante", "gold":0, "motto":"Honor at any Cost", "seat":"null", "territories":[], "kingdom":"", "active":true},
+	{
+		"name":"James", 
+		"player":"NPC", 
+		"race":"Lagante", 
+		"gold":0, 
+		"motto":"Honor at any Cost", 
+		"seat":"meridian", 
+		"territories":[
+			"kent",
+			"meridian"
+		], 
+		"kingdom":"", 
+		"active":true
+	},
 	{
 		"name":"Kellogg",
 		"player":"NPC",
@@ -156,9 +339,49 @@
 		"active":true
 	},
 	{"name":"Klickitat", "player":"NPC", "race":"Rio", "gold":0, "motto":"From our Ships come all that is Good", "seat":"null", "territories":[], "kingdom":"", "active":false},
-	{"name":"Langston", "player":"NPC", "race":"Magnol", "gold":0, "motto":"Take to the Heights", "seat":"null", "territories":[], "kingdom":"", "active":false},
-	{"name":"Lawton", "player":"NPC", "race":"Magnol", "gold":0, "motto":"At home in the field", "seat":"null", "territories":[], "kingdom":"", "active":true},
-	{"name":"Macadam", "player":"NPC", "race":"Magnol", "gold":0, "motto":"Risk all for the right", "seat":"null", "territories":[], "kingdom":"", "active":true},
+	{
+		"name":"Langston",
+		"player":"NPC",
+		"race":"Magnol",
+		"gold":0,
+		"motto":"Take to the Heights",
+		"seat":"skyway",
+		"territories":[
+			"skyway",
+			"allentown"
+		],
+		"kingdom":"",
+	"active":false
+	},
+	{
+		"name":"Lawton",
+		"player":"NPC",
+		"race":"Magnol",
+		"gold":0,
+		"motto":"At home in the field",
+		"seat":"fort_lawton",
+		"territories":[
+			"fort_lawton",
+			"the_armoury"
+		],
+		"kingdom":"",
+	"active":true
+	},
+
+	{
+		"name":"Macadam",
+		"player":"NPC",
+		"race":"Magnol",
+		"gold":0,
+		"motto":"Risk all for the right",
+		"seat":"grandview",
+		"territories":[
+			"grandview",
+			"tukwila_heights"
+		],
+		"kingdom":"",
+		"active":true
+	},
 	{
 		"name":"Magnuson",
 		"player":"Cody Magnusson",
@@ -188,7 +411,20 @@
 		"kingdom":"",
 		"active":true
 	},
-	{"name":"Penrose", "player":"NPC", "race":"Rio", "gold":0, "motto":"Through it all unbowed", "seat":"null", "territories":[], "kingdom":"", "active":true},
+	{
+		"name":"Penrose",
+		"player":"NPC",
+		"race":"Rio",
+		"gold":0,
+		"motto":"Through it all unbowed",
+		"seat":"roseburg",
+		"territories":[
+			"glendale",
+			"roseburg"
+		],
+		"kingdom":"",
+		"active":true
+	},
 	{
 		"name":"Sande",
 		"player":"Jacob Sand",
@@ -276,7 +512,28 @@
 		"kingdom":"",
 		"active":true
 	},
-	{"name":"Washburne", "player":"Skylar Woodies", "race":"Magnol", "gold":9, "motto":"Tides of Fate", "seat":"null", "territories":[], "kingdom":"", "active":true},
+	{
+		"name":"Washburne",
+		"player":"Skylar Woodies",
+		"race":"Magnol",
+		"gold":9,
+		"motto":"Tides of Fate",
+		"seat":"black_river",
+		"territories":[
+			"lakeridge",
+			"allentown",
+			"skyway",
+			"bryn_mawr",
+			"black_river",
+			"fort_dent",
+			"longacre",
+			"lind",
+			"renton",
+			"benson"
+		],
+		"kingdom":"",
+		"active":true
+	},
 	{
 		"name":"Westshore",
 		"player":"Tessa Thurman",

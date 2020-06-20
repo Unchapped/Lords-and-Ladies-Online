@@ -7,17 +7,19 @@ $(document).ready(function() {
     $.getJSON('houses.json', function(data) {
         houses = data;
         houses.forEach(function(house, index){
+            if (!house.active) return;
             // TODO: add the house to the house list
 
             //color the house territories
             house.territories.forEach(function(territory, index){
-                var land = $("#".concat(territory))
+                var land = $("#" + territory);
                 land.addClass(house.name.toLowerCase());
                 land.addClass("owned");
+                if(land.length == 0) console.log("error: missing DOM element assgning territory" + territory +" to house: " + house.name)
             });
 
             //draw the house seat
-            var seat = $("#".concat(house.seat))
+            var seat = $("#" + house.seat);
             if(seat.length > 0) { //no empty queries
                 var containerBox = seat[0].getBBox();
                 var icon = document.createElementNS('http://www.w3.org/2000/svg', 'image');
