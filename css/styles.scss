@@ -12,10 +12,9 @@ body {
   font-family: 'Crimson Text', serif;
   min-height: 100vh;
   color: black;
-  /* background-image: url("../images/old_paper_texture.svg"); */
-  /* <a href="https://www.vecteezy.com/free-vector/old-paper">Old Paper Vectors by Vecteezy</a> */
-  background-image: url("../images/grunge_texture.svg");
-  /* <a href="https://www.vecteezy.com/free-vector/old-paper">Old Paper Vectors by Vecteezy</a> */
+  background-image: url("../images/old_paper_texture.svg");
+  background-color: Moccasin;
+  background-blend-mode: multiply;
 }
 
 h1, h2, h3 {
@@ -68,14 +67,17 @@ body>svg {
     fill-opacity:0.75;
   }
 
-  g:hover path {
+  g:hover>path {
     fill-opacity:1.0;
     stroke-width: 5px !important;
   }
 }  
   .mountain {fill:darkgrey}
   .sea {fill:steelblue;}
-  .river {fill:lightseagreen}
+  .river {
+    fill:lightseagreen;
+    stroke:lightseagreen
+  }
   .land {fill:darkkhaki}
   /* .bridge {fill:saddlebrown} */
 
@@ -140,29 +142,70 @@ image.heraldry {
 .owned .land{
   stroke-width: 3px;
 }
+
 .acosta .land{
   fill: darkred;
   stroke: white;
 }
 
+.ascella .land{
+  fill: forestgreen;
+  stroke: black;
+}
+
+.aurelii .land{
+  fill: gold;
+  stroke: indigo;
+}
+
+.burke .land{
+  fill: darkred;
+  stroke: white;
+}
+
+.carkeek .land{
+  fill: white;
+  stroke: forestgreen;
+}
+
 .genesee .land{
-  fill:purple;
+  fill: purple;
+  stroke: gold;
+}
+
+.inverness .land{
+  fill: darkred;
   stroke: gold;
 }
 
 .kellogg .land{
-  fill:royalblue;
+  fill: royalblue;
   stroke: gold;
 }
 
 .jackson .land{
-  fill:forestgreen;
+  fill: forestgreen;
   stroke: gold;
 }
 
+.magnuson .land{
+  fill: gold;
+  stroke: royalblue;
+}
+
 .mercer .land{
-  fill:purple;
+  fill: purple;
   stroke: gold;
+}
+
+.sande .land{
+  fill: gold;
+  stroke: forestgreen;
+}
+
+.sealth .land{
+  fill: forestgreen;
+  stroke: white;
 }
 
 .silverthorn .land{
@@ -173,6 +216,11 @@ image.heraldry {
 .seaward .land{
   fill:forestgreen;
   stroke: gold;
+}
+
+.suzallo .land{
+  fill: purple;
+  stroke: white;
 }
 
 .westshore .land{

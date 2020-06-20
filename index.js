@@ -1,11 +1,12 @@
 $(document).ready(function() {
-    
+    /* get a pointer to the main SVG map and the dynamic layer added for this script*/
+    var map_root = $("#map_root");
+    var dynamic_layer = $("#dynamic_layer");
     /* download data from the server and populate the map */
-    var gamestate;
-    $.getJSON('gamestate.json', function(data) {
-        gamestate = data;
-        console.log(gamestate);
-        gamestate.houses.forEach(function(house, index){
+    var houses;
+    $.getJSON('houses.json', function(data) {
+        houses = data;
+        houses.forEach(function(house, index){
             // TODO: add the house to the house list
 
             //color the house territories
@@ -22,8 +23,8 @@ $(document).ready(function() {
                 var icon = document.createElementNS('http://www.w3.org/2000/svg', 'image');
                 icon.setAttribute("href", "images/houses/" + house.name + ".png");
                 icon.setAttribute("class", "heraldry");
-                seat[0].appendChild(icon);
-                var renderedBox = icon.getBBox();
+                dynamic_layer[0].appendChild(icon);
+                var renderedBox = icon.getBBox(); //let CSS set the size for us before positioning
                 icon.setAttribute("x", containerBox.x + (containerBox.width / 2) - (renderedBox.width / 2));
                 icon.setAttribute("y", containerBox.y + (containerBox.height / 2) - (renderedBox.height / 2));
             }

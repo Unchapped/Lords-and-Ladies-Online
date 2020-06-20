@@ -21,15 +21,81 @@
 			"active":true
 		},
 		{"name":"Andover", "player":"NPC", "race":"Rio", "gold":0, "motto":"Judge not lest ye be judged", "seat":"null", "territories":[], "kingdom":"", "active":false},
-		{"name":"Ascella", "player":"Ashley Reynolds", "race":"Lagante", "gold":18, "motto":"Deliberate amid Action", "seat":"null", "territories":[], "kingdom":"", "active":true},
+		{
+			"name":"Ascella",
+			"player":"Ashley Reynolds",
+			"race":"Lagante",
+			"gold":18,
+			"motto":"Deliberate amid Action",
+			"seat":"pinehurst",
+			"territories":[
+				"ronald",
+				"ridgecrest",
+				"bitter_lake",
+				"haller",
+				"pinehurst",
+				"northgate",
+				"citadel_of_the_lake",
+				"the_riviera"
+			],
+			"kingdom":"",
+			"active":true
+		},
 		{"name":"Ashton", "player":"NPC", "race":"Magnol", "gold":0, "motto":"Born of Fire", "seat":"null", "territories":[], "kingdom":"", "active":true},
-		{"name":"Aurelii", "player":"Max McCall", "race":"Lucian", "gold":11, "motto":"Excelsior", "seat":"null", "territories":[], "kingdom":"", "active":true},
+		{
+			"name":"Aurelii",
+			"player":"Max McCall",
+			"race":"Lucian",
+			"gold":11,
+			"motto":"Excelsior",
+			"seat":"golden_gardens",
+			"territories":[
+				"golden_gardens",
+				"loyal_heights",
+				"the_crown_hills",
+				"shilshole",
+				"old_ballard",
+				"leary",
+				"fremont"
+			],
+			"kingdom":"",
+			"active":true
+		},
 		{"name":"Baleen", "player":"Zakariya Dehlawi", "race":"Lucian", "gold":4, "motto":"The Pack is the Wolf's Strength", "seat":"null", "territories":[], "kingdom":"", "active":true},
 		{"name":"Barrett", "player":"NPC", "race":"Magnol", "gold":0, "motto":"Hew to the True", "seat":"null", "territories":[], "kingdom":"", "active":true},
 		{"name":"Bitter", "player":"NPC", "race":"Magnol", "gold":0, "motto":"The Proud Die the Same", "seat":"null", "territories":[], "kingdom":"", "active":false},
 		{"name":"Boeing", "player":"NPC", "race":"Rio", "gold":0, "motto":"Boldly going where angels fear to tread", "seat":"null", "territories":[], "kingdom":"", "active":true},
-		{"name":"Burke", "player":"NPC", "race":"Lagante", "gold":0, "motto":"The Land Provides", "seat":"null", "territories":[], "kingdom":"", "active":true},
-		{"name":"Carkeek", "player":"Chris Prichard", "race":"Lagante", "gold":5, "motto":"In the Light We Grow", "seat":"null", "territories":[], "kingdom":"", "active":true},
+		{
+			"name":"Burke", 
+			"player":"NPC", 
+			"race":"Lagante", 
+			"gold":0, 
+			"motto":"The Land Provides", 
+			"seat":"lake_meridian", 
+			"territories":["lake_meridian"], 
+			"kingdom":"", 
+			"active":true
+		},
+		{	
+			"name":"Carkeek",
+			"player":"Chris Prichard",
+			"race":"Lagante",
+			"gold":5,
+			"motto":"In the Light We Grow",
+			"seat":"the_carkeek",
+			"territories":[
+				"richmond",
+				"innis_arden",
+				"the_highlands",
+				"the_carkeek",
+				"the_greenwood",
+				"the_middle_vale",
+				"castle_stroud",
+				"phinney"
+			],
+			"kingdom":"",
+			"active":true
+		},
 		{"name":"Capehart", "player":"NPC", "race":"Magnol", "gold":0, "motto":"Cross at your Peril", "seat":"null", "territories":[], "kingdom":"", "active":true},
 		{"name":"Channon", "player":"NPC", "race":"Lagante", "gold":0, "motto":"Standing Strong", "seat":"null", "territories":[], "kingdom":"", "active":false},
 		{"name":"Corvus", "player":"Charles Cadwallader", "race":"Magnol", "gold":5, "motto":"Deeds, not Words", "seat":"null", "territories":[], "kingdom":"", "active":true},
@@ -50,7 +116,20 @@
 		},
 		{"name":"Highline", "player":"NPC", "race":"Magnol", "gold":0, "motto":"A Cut Above", "seat":"null", "territories":[], "kingdom":"", "active":true},
 		{"name":"Ilono", "player":"Alex West",  "race":"Lucian", "gold":6, "motto":"Our Light. Our Might. Our Right.", "seat":"null", "territories":[], "kingdom":"", "active":true},
-		{"name":"Inverness", "player":"NPC", "race":"Lagante", "gold":0, "motto":"Our Faith is our Fortress", "seat":"null", "territories":[], "kingdom":"", "active":true},
+		{
+			"name":"Inverness", 
+			"player":"NPC", 
+			"race":"Lagante", 
+			"gold":0, 
+			"motto":"Our Faith is our Fortress", 
+			"seat":"the_wedgewood", 
+			"territories":[
+				"the_wedgewood",
+				"chelsea"
+			], 
+			"kingdom":"", 
+			"active":true
+		},
 		{
 			"name":"Jackson",
 			"player":"NPC",
@@ -81,7 +160,24 @@
 		{"name":"Langston", "player":"NPC", "race":"Magnol", "gold":0, "motto":"Take to the Heights", "seat":"null", "territories":[], "kingdom":"", "active":false},
 		{"name":"Lawton", "player":"NPC", "race":"Magnol", "gold":0, "motto":"At home in the field", "seat":"null", "territories":[], "kingdom":"", "active":true},
 		{"name":"Macadam", "player":"NPC", "race":"Magnol", "gold":0, "motto":"Risk all for the right", "seat":"null", "territories":[], "kingdom":"", "active":true},
-		{"name":"Magnuson", "player":"Cody Magnusson", "race":"Lucian", "gold":0, "motto":"Illuminate the Dark", "seat":"null", "territories":[], "kingdom":"", "active":true},
+		{
+			"name":"Magnuson",
+			"player":"Cody Magnusson",
+			"race":"Lucian",
+			"gold":0,
+			"motto":"Illuminate the Dark",
+			"seat":"magnuson_park",
+			"territories":[
+				"ravenna",
+				"nordheim",
+				"the_hawthorne_hills",
+				"magnuson_park",
+				"laurelhurst",
+				"the_proving_grounds"
+			],
+			"kingdom":"",
+			"active":true
+		},
 		{
 			"name":"Mercer",
 			"player":"NPC",
@@ -94,7 +190,27 @@
 			"active":true
 		},
 		{"name":"Penrose", "player":"NPC", "race":"Rio", "gold":0, "motto":"Through it all unbowed", "seat":"null", "territories":[], "kingdom":"", "active":true},
-		{"name":"Sande", "player":"Jacob Sand", "race":"Lagante", "gold":5, "motto":"By Works and Deeds", "seat":"null", "territories":[], "kingdom":"", "active":true},
+		{
+			"name":"Sande",
+			"player":"Jacob Sand",
+			"race":"Lagante",
+			"gold":5,
+			"motto":"By Works and Deeds",
+			"seat":"mountlake",
+			"territories":[
+				"mountlake",
+				"the_briar_mountains",
+				"upper_lake_forest",
+				"lower_lake_forest",
+				"ballinger",
+				"lake_of_echoes",
+				"woodway",
+				"point_wells",
+				"briarcrest"
+			],
+			"kingdom":"",
+			"active":true
+		},
 		{
 			"name":"Seaward",
 			"player":"William Jahnke",
@@ -114,7 +230,17 @@
 			"kingdom":"",
 			"active":true
 		},
-		{"name":"Sealth", "player":"NPC", "race":"Lagante", "gold":0, "motto":"As the Gods will, so be it", "seat":"null", "territories":[], "kingdom":"", "active":true},
+		{
+			"name":"Sealth",
+			"player":"NPC",
+			"race":"Lagante",
+			"gold":0,
+			"motto":"As the Gods will, so be it",
+			"seat":"the_queens_land",
+			"territories":["the_queens_land"],
+			"kingdom":"",
+			"active":true
+		},
 		{"name":"Sheridan", "player":"NPC", "race":"Lagante", "gold":0, "motto":"Catch us if you can", "seat":"null", "territories":[], "kingdom":"", "active":false},
 		{
 			"name":"Silverthorn",
@@ -134,7 +260,23 @@
 			"kingdom":"",
 			"active":true
 		},
-		{"name":"Suzallo", "player":"Brian Murdock", "race":"Lucian","gold":2, "motto":"Do most with least", "seat":"null", "territories":[], "kingdom":"", "active":true},
+		{
+			"name":"Suzallo",
+			"player":"Brian Murdock",
+			"race":"Lucian","gold":2,
+			"motto":"Do most with least",
+			"seat":"the_university",
+			"territories":[
+				"roosevelt",
+				"tangletown",
+				"the_woodlands",
+				"sulphur_springs",
+				"wallingford",
+				"the_university"
+			],
+			"kingdom":"",
+			"active":true
+		},
 		{"name":"Washburne", "player":"Skylar Woodies", "race":"Magnol", "gold":9, "motto":"Tides of Fate", "seat":"null", "territories":[], "kingdom":"", "active":true},
 		{
 			"name":"Westshore",
