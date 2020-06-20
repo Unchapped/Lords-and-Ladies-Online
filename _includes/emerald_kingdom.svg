@@ -545,11 +545,11 @@
      class="sea" />
     <title>Elliott Bay</title>
   </g>
-  <g id="yestler_terrace">
+  <g id="yesler_terrace">
   <path
      d="m 891.78994,1772.1124 c 1.17783,-0.6303 3.95837,-4.257 6.17897,-8.0592 4.28834,-7.3426 8.06369,-11.0532 11.24616,-11.0532 2.85497,0 30.7934,-13.7196 41.64006,-20.448 5.14532,-3.1918 12.9931,-8.5445 17.43952,-11.895 10.42051,-7.852 26.7057,-23.4183 26.70414,-25.5252 -9.3e-4,-1.2549 -2.69425,-2.2806 -11.66071,-4.4408 -6.41272,-1.5449 -15.36916,-4.3048 -19.90319,-6.1331 -15.15412,-6.1106 -19.81618,-10.1588 -35.19178,-30.5579 -13.12139,-17.4084 -26.68562,-20.7863 -78.74311,-19.6094 -16.5,0.373 -31.35,0.9359 -33,1.2509 -2.8221,0.5388 -3.45958,1.6505 -10.75,18.7467 -4.2625,9.9957 -7.74578,19.51 -7.74061,21.1429 0.009,2.7258 0.87245,3.455 10.55087,8.9063 14.39436,8.1075 20.56775,14.8512 39.32888,42.9622 15.96237,23.9175 19.77388,30.6132 22.65616,39.8001 1.48144,4.7219 2.23137,5.7783 4.37146,6.1582 4.22774,0.7504 14.57033,-0.013 16.87318,-1.2455 z"
      class="land" />
-    <title>Yestler Terrace</title>
+    <title>Yesler Terrace</title>
   </g>
   <g id="duwamish_mouth">
     <title>The Many Mouths of the Duwamish</title>
@@ -1092,11 +1092,14 @@
   </g>
   <g id="icon_layer">
     <!-- <use id="southpark_stockpile" href="#barrel" width="48" height="48" x="735" y="2320"></use> -->
-
     <use id="the_georgetown_bridge" href="#bridge" width="48" height="48" x="775" y="2255"></use>
     <use id="the_allentown_bridge" href="#bridge" width="48" height="48" x="1260" y="2675"></use>
-
     <use id="the_tukwila_bridge" href="#bridge" width="48" height="48" x="1320" y="2795" transform="rotate(-35 1320 2795)"></use>
     <use id="the_longacre_bridge" href="#bridge" width="48" height="48" x="1450" y="2780" transform="rotate(35 1450 2780)"></use>
+    <use id="the_bryn_mawr_bridge" href="#bridge" width="48" height="48" x="1655" y="2710">"</use>
+    <use id="the_liberty_park_bridge" href="#bridge" width="48" height="48" x="1730" y="2710">"</use>
+    <use id="the_southgate_bridge" href="#bridge" width="48" height="48" x="1405" y="2950"></use>
+    <use id="the_orillia_bridge" href="#bridge" width="48" height="48" x="1410" y="3050"></use>
+    <use id="the_emerald_bridge" href="#bridge" width="48" height="48" x="1350" y="3130"></use>
   </g>
 </svg>

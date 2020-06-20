@@ -70,7 +70,7 @@ body>svg {
 
   g:hover path {
     fill-opacity:1.0;
-    stroke-width: 2px;
+    stroke-width: 5px !important;
   }
 }  
   .mountain {fill:darkgrey}
@@ -117,7 +117,7 @@ body>svg {
   .heraldry {
     text-align: center;
     grid-area: logo;
-    img{height: 3em;}
+    img {height: 3em;}
   }
   .player{grid-area: player;}
   .race{grid-area: race;}
@@ -128,6 +128,60 @@ body>svg {
   text-align: left;
 
 }
+
+/* sets the height on the map */
+image.heraldry {
+  height: 4em;
+  width: 4em;
+  preserveAspectRatio: "xMidyMid meet";
+}
+
+/* house colors */
+.owned .land{
+  stroke-width: 3px;
+}
+.acosta .land{
+  fill: darkred;
+  stroke: white;
+}
+
+.genesee .land{
+  fill:purple;
+  stroke: gold;
+}
+
+.kellogg .land{
+  fill:royalblue;
+  stroke: gold;
+}
+
+.jackson .land{
+  fill:forestgreen;
+  stroke: gold;
+}
+
+.mercer .land{
+  fill:purple;
+  stroke: gold;
+}
+
+.silverthorn .land{
+  fill:gold;
+  stroke: black;
+}
+
+.seaward .land{
+  fill:forestgreen;
+  stroke: gold;
+}
+
+.westshore .land{
+  fill:seashell;
+  stroke: royalblue;
+}
+
+
+
 /*
 p, ul, ol, table, pre, dl {
   margin:0 0 20px;

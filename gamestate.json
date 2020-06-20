@@ -1,6 +1,25 @@
 {
 	"houses": [
-		{"name":"Acosta", "player":"Ronald Parrish", "race":"Rio", "gold":0, "motto":"Thus Virtue Flourishes", "seat":"null", "territories":[], "kingdom":"", "active":true},
+		{
+			"name":"Acosta",
+			"player":"Ronald Parrish",
+			"race":"Rio",
+			"gold":0,
+			"motto":"Thus Virtue Flourishes",
+			"seat":"south_park",
+			"territories":[
+				"westwood",
+				"delridge",
+				"arrowhead",
+				"south_park",
+				"industry_flats",
+				"the_georgetown_reach",
+				"central_beacon_hills",
+				"georgetown"
+			],
+			"kingdom":"",
+			"active":true
+		},
 		{"name":"Andover", "player":"NPC", "race":"Rio", "gold":0, "motto":"Judge not lest ye be judged", "seat":"null", "territories":[], "kingdom":"", "active":false},
 		{"name":"Ascella", "player":"Ashley Reynolds", "race":"Lagante", "gold":18, "motto":"Deliberate amid Action", "seat":"null", "territories":[], "kingdom":"", "active":true},
 		{"name":"Ashton", "player":"NPC", "race":"Magnol", "gold":0, "motto":"Born of Fire", "seat":"null", "territories":[], "kingdom":"", "active":true},
@@ -47,13 +66,33 @@
 			"active":true
 		},
 		{"name":"James", "player":"NPC", "race":"Lagante", "gold":0, "motto":"Honor at any Cost", "seat":"null", "territories":[], "kingdom":"", "active":true},
-		{"name":"Kellogg", "player":"NPC", "race":"Rio", "gold":0, "motto":"Guided by the Gods", "seat":"null", "territories":[], "kingdom":"", "active":true},
+		{
+			"name":"Kellogg",
+			"player":"NPC",
+			"race":"Rio",
+			"gold":0,
+			"motto":"Guided by the Gods",
+			"seat":"pigeon_point",
+			"territories":["pigeon_point"],
+			"kingdom":"",
+			"active":true
+		},
 		{"name":"Klickitat", "player":"NPC", "race":"Rio", "gold":0, "motto":"From our Ships come all that is Good", "seat":"null", "territories":[], "kingdom":"", "active":false},
 		{"name":"Langston", "player":"NPC", "race":"Magnol", "gold":0, "motto":"Take to the Heights", "seat":"null", "territories":[], "kingdom":"", "active":false},
 		{"name":"Lawton", "player":"NPC", "race":"Magnol", "gold":0, "motto":"At home in the field", "seat":"null", "territories":[], "kingdom":"", "active":true},
 		{"name":"Macadam", "player":"NPC", "race":"Magnol", "gold":0, "motto":"Risk all for the right", "seat":"null", "territories":[], "kingdom":"", "active":true},
 		{"name":"Magnuson", "player":"Cody Magnusson", "race":"Lucian", "gold":0, "motto":"Illuminate the Dark", "seat":"null", "territories":[], "kingdom":"", "active":true},
-		{"name":"Mercer", "player":"NPC", "race":"Lucian", "gold":0, "motto":"Honor and Glory", "seat":"null", "territories":[], "kingdom":"", "active":true},
+		{
+			"name":"Mercer",
+			"player":"NPC",
+			"race":"Lucian",
+			"gold":0,
+			"motto":"Honor and Glory",
+			"seat":"stevens",
+			"territories":["stevens"],
+			"kingdom":"",
+			"active":true
+		},
 		{"name":"Penrose", "player":"NPC", "race":"Rio", "gold":0, "motto":"Through it all unbowed", "seat":"null", "territories":[], "kingdom":"", "active":true},
 		{"name":"Sande", "player":"Jacob Sand", "race":"Lagante", "gold":5, "motto":"By Works and Deeds", "seat":"null", "territories":[], "kingdom":"", "active":true},
 		{
@@ -97,7 +136,24 @@
 		},
 		{"name":"Suzallo", "player":"Brian Murdock", "race":"Lucian","gold":2, "motto":"Do most with least", "seat":"null", "territories":[], "kingdom":"", "active":true},
 		{"name":"Washburne", "player":"Skylar Woodies", "race":"Magnol", "gold":9, "motto":"Tides of Fate", "seat":"null", "territories":[], "kingdom":"", "active":true},
-		{"name":"Westshore", "player":"Tessa Thurman", "race":"Lagante", "gold":11, "motto":"By Land, By Sea", "seat":"null", "territories":[], "kingdom":"", "active":true}
+		{
+			"name":"Westshore",
+			"player":"Tessa Thurman",
+			"race":"Lagante",
+			"gold":11,
+			"motto":"By Land, By Sea",
+			"seat":"montlake",
+			"territories":[
+				"montlake",
+				"broadmoor",
+				"boren",
+				"eastlake",
+				"the_denny_hills",
+				"mayfair"
+			],
+			"kingdom":"",
+			"active":true
+		}
 	],
 	"trade_goods": [
 		{ "name": "iron", "value": 4},
