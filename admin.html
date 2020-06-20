@@ -1,0 +1,76 @@
+---
+---
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Lords and Ladies of the Emerald Kingdom</title>
+    <script src="https://kit.fontawesome.com/82239a48ce.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+    <script src="index.js" crossorigin="anonymous"></script>
+    <script src="admin.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" -->
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    {% include emerald_kingdom.svg %}
+    <div id="menu_box">
+      <h3>A True and Correct Map of the </h3>
+      <h1>Emerald Kingdoms</h1>
+      <img src="images/horizontal-rule.svg", width=80% height="40px" /><!-- public domain per https://freesvg.org/1539645636 -->
+      <div id="map_key">
+        <h2>Map Key</h2>
+        <h4><i class="fab fa-fort-awesome"></i> Stronghold (Levy Troops)</h4>
+        <h4><svg class="svg-inline--fa fa-crown fa-w-20" viewBox="0 0 512 512" ><use href="#barrel" /></svg> Stockpile (Army Supply)</h4>
+        <h4><i class="fas fa-crown"></i> Palace (Cultural Prestige)</h4>
+        <h4><svg class="svg-inline--fa fa-crown fa-w-20" viewBox="0 0 512 512" ><use href="#bridge" /></svg> Bridge (Connects Provinces over Water)</h4>
+        <h4><i class="fas fa-mountain"></i> Mountains (Impassible)</h4>
+        <h4><svg class="svg-inline--fa fa-crown fa-w-20" viewBox="0 0 512 512" ><use href="#blob" class="sea"/></svg> Sea / Estuary (Navigable)</h4>
+        <h4><svg class="svg-inline--fa fa-crown fa-w-20" viewBox="0 0 512 512" ><use href="#blob" class="river"/></svg> Lake / River (Impassible)</h4>
+      </div>
+      <div id="trade_goods">
+        <h2>Trade Goods</h2>
+            {% for good in site.data.gamestate.trade_goods %}
+              {% include trade_good.html content=good %}
+            {% endfor %}
+      </div>
+      <div id="noble_houses">
+        <h2>Noble Houses of the<br/>Emerald Kingdoms</h2>
+        <div class="controls">
+          <span> Sort: 
+          <a><i class="fas fa-sort-alpha-down"></i></a>
+          <a><i class="fas fa-sitemap"></i></a>
+          <a><i class="fas fa-user"></i></a>
+          <a><i class="fas fa-flag"></i></a>
+        </div>
+        <div class="list">
+            {% for house in site.data.gamestate.houses %}
+              {% include house.html content=house %}
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% include symbols.svg %}
+  </body>
+<script>
+    /* $(function() {
+
+
+   var people = [];
+
+   $.getJSON('people.json', function(data) {
+       $.each(data.person, function(i, f) {
+          var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
+           "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
+           $(tblRow).appendTo("#userdata tbody");
+     });
+
+   });
+
+}); */
+</script>
+</html>
