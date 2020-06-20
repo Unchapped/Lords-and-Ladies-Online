@@ -57,6 +57,12 @@ path {
 body>svg {
   width: 100%;
 
+  text {
+    font-family: 'Cinzel', serif;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
   g path {
     stroke:#000000;
     fill-opacity:0.75;
