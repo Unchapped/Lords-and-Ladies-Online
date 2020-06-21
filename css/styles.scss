@@ -138,6 +138,26 @@ image.heraldry {
   preserveAspectRatio: "xMidyMid meet";
 }
 
+/* symbol colors */
+symbol path{
+  stroke-width: 1px;
+  stroke: black;
+}
+symbol#barrel path {fill: saddlebrown;}
+symbol#barrel path.lid {fill: saddlebrown;}
+symbol#barrel path.rings {fill: #555555;}
+
+symbol#gems path {fill: cyan;}
+
+symbol#gold path {fill: orange;}
+symbol#gold path.top {fill: gold;}
+
+symbol#wine path {fill: purple;}
+symbol#wine path.stem {fill: green;}
+
+symbol#lumber path {fill: green;}
+symbol#lumber path.dark {fill: darkgreen;}
+
 /* house colors */
 .owned .land{
   stroke-width: 3px;
