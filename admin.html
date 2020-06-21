@@ -17,60 +17,43 @@
     <![endif]-->
   </head>
   <body>
-    {% include emerald_kingdom.svg %}
+    {% include emerald_kingdom_working.svg %}
     <div id="menu_box">
-      <h3>A True and Correct Map of the </h3>
+      <h3 style="color: red">Admin Interface to the</h3>
       <h1>Emerald Kingdoms</h1>
       <img src="images/horizontal-rule.svg", width=80% height="40px" /><!-- public domain per https://freesvg.org/1539645636 -->
-      <div id="map_key">
-        <h2>Map Key</h2>
-        <h4><i class="fab fa-fort-awesome"></i> Stronghold (Levy Troops)</h4>
-        <h4><svg class="svg-inline--fa fa-crown fa-w-20" viewBox="0 0 512 512" ><use href="#barrel" /></svg> Stockpile (Army Supply)</h4>
-        <h4><i class="fas fa-crown"></i> Palace (Cultural Prestige)</h4>
-        <h4><svg class="svg-inline--fa fa-crown fa-w-20" viewBox="0 0 512 512" ><use href="#bridge" /></svg> Bridge (Connects Provinces over Water)</h4>
-        <h4><i class="fas fa-mountain"></i> Mountains (Impassible)</h4>
-        <h4><svg class="svg-inline--fa fa-crown fa-w-20" viewBox="0 0 512 512" ><use href="#blob" class="sea"/></svg> Sea / Estuary (Navigable)</h4>
-        <h4><svg class="svg-inline--fa fa-crown fa-w-20" viewBox="0 0 512 512" ><use href="#blob" class="river"/></svg> Lake / River (Impassible)</h4>
+      <div id="symbol_palette" style="svg{width: 48px; height: 48px;}">
+        <style>#symbol_palette svg{width: 48px; height: 48px;} #symbol_palette svg.pop{border:1px solid red;}</style>
+        <h2>Symbol palette</h2>
+        <svg viewBox="0 0 512 512" id="admin-castle"><use href="#castle"></use></svg>
+        <svg viewBox="0 0 512 512" id="admin-barrel"><use href="#barrel"></use></svg>
+        <svg viewBox="0 0 512 512" id="admin-crown"><use href="#crown"></use></svg>
+        <svg viewBox="0 0 512 512" id="admin-bridge"><use href="#bridge"></use></svg>
+        <svg viewBox="0 0 640 512" id="admin-mountain"><use href="#mountain"></use></svg>
+        <hr />
+        <svg viewBox="0 0 576 512" id="admin-gems"><use href="#gems"></use></svg>
+        <svg viewBox="0 0 512 512" id="admin-gold"><use href="#gold"></use></svg>
+        <svg viewBox="0 0 512 512" id="admin-silver"><use href="#silver"></use></svg>
+        <svg viewBox="0 0 512 512" id="admin-iron"><use href="#iron"></use></svg>
+
+        <svg viewBox="0 0 512 512" id="admin-oil"><use href="#oil"></use></svg>
+        <svg viewBox="0 0 384 512" id="admin-lumber"><use href="#lumber"></use></svg>
+
+        <svg viewBox="0 0 512 512" id="admin-spices"><use href="#spices"></use></svg>
+        <svg viewBox="0 0 512 512" id="admin-wine"><use href="#wine"></use></svg>
+        <svg viewBox="0 0 512 512" id="admin-pearls"><use href="#pearls"></use></svg>
+        <svg viewBox="0 0 512 512" id="admin-furs"><use href="#furs"></use></svg>
+
       </div>
       <div id="trade_goods">
-        <h2>Trade Goods</h2>
-            {% for good in site.data.gamestate.trade_goods %}
-              {% include trade_good.html content=good %}
-            {% endfor %}
+        <h2>Trade Goods</h2>            
+              <h4><svg class="svg-inline--fa fa-square fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48z"></path></svg><!-- <i class="fas fa-square"></i> --> textiles</h4>
       </div>
-      <div id="noble_houses">
-        <h2>Noble Houses of the<br/>Emerald Kingdoms</h2>
-        <div class="controls">
-          <span> Sort: 
-          <a><i class="fas fa-sort-alpha-down"></i></a>
-          <a><i class="fas fa-sitemap"></i></a>
-          <a><i class="fas fa-user"></i></a>
-          <a><i class="fas fa-flag"></i></a>
-        </div>
-        <div class="list">
-            {% for house in site.data.gamestate.houses %}
-              {% include house.html content=house %}
-            {% endfor %}
+</div>
+
+            
         </div>
       </div>
-    </div>
-    {% include symbols.svg %}
+      {% include symbols.svg %}
   </body>
-<script>
-    /* $(function() {
-
-
-   var people = [];
-
-   $.getJSON('people.json', function(data) {
-       $.each(data.person, function(i, f) {
-          var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
-           "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
-           $(tblRow).appendTo("#userdata tbody");
-     });
-
-   });
-
-}); */
-</script>
 </html>
