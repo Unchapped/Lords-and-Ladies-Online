@@ -130,6 +130,7 @@
 		"gold":0, 
 		"motto":"The Land Provides", 
 		"seat":"lake_meridian", 
+		"seat_location":{"x":760,"y":480},
 		"territories":["lake_meridian"], 
 		"kingdom":"", 
 		"active":true
@@ -141,6 +142,7 @@
 		"gold":5,
 		"motto":"In the Light We Grow",
 		"seat":"the_carkeek",
+		"seat_location":{"x":525,"y":745},
 		"territories":[
 			"richmond",
 			"innis_arden",
@@ -415,6 +417,7 @@
 		"gold":0,
 		"motto":"Honor and Glory",
 		"seat":"stevens",
+		"seat_location":{"x":975,"y":1445},
 		"territories":["stevens"],
 		"kingdom":"",
 		"active":true
