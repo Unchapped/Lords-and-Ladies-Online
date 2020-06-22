@@ -88,19 +88,27 @@ symbol#crown path {fill: orange;}
 symbol#crown path.rim {fill: currentColor;}
 symbol#mountain path {fill: currentColor;}
 
-
 symbol#iron path {fill: #333333;}
-
-symbol#silver path {fill:grey;}
+symbol#silver path {fill:silver;}
 symbol#silver path.handle {fill: currentColor;}
-
-symbol#gems path {fill: cyan;}
-
 symbol#gold path {fill: orange;}
 symbol#gold path.top {fill: yellow;}
+symbol#gems path {fill: currentColor;}
 
+symbol#oil path {fill:orange;}
+symbol#oil path.handle {fill: currentColor;}
+symbol#spices path {fill:darkgrey;}
+symbol#spices path.pestle {fill: dimgrey;}
+symbol#spices path.pile {fill: orangered;}
 symbol#wine path {fill: purple;}
 symbol#wine path.stem {fill: green;}
+symbol#pearls path {fill: papayawhip;}
+symbol#pearls path:nth-child(even) {fill: tan;}
+
+symbol#furs path {fill: chocolate;}
+
+symbol#textiles path {fill:currentColor;}
+symbol#textiles path.end {fill: dimgrey;}
 
 symbol#lumber path {fill: green;}
 symbol#lumber path.dark {fill: darkgreen;}
@@ -337,8 +345,8 @@ image.heraldry {
 }
 
 .seaward {
-  .land{fill:forestgreen; stroke: gold;}
-  use{color: darkred;}
+  .land{fill:forestgreen; stroke: darkred;}
+  use{color: gold;}
 }
 
 .suzallo {

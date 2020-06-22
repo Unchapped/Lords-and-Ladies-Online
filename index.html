@@ -23,19 +23,27 @@
       <img src="images/horizontal-rule.svg", width=80% height="40px" /><!-- public domain per https://freesvg.org/1539645636 -->
       <div id="map_key">
         <h2>Map Key</h2>
-        <h4><svg width="3em" height="3em"><use href="#castle"></use></svg> Stronghold (Levy Troops)</h4>
-        <h4><svg width="3em" height="3em"><use href="#barrel"></use></svg> Stockpile (Army Supply)</h4>
-        <h4><svg width="3em" height="3em"><use href="#crown"></use></svg> Palace (Cultural Prestige)</h4>
-        <h4><svg width="3em" height="3em"><use href="#bridge"></use></svg> Bridge (Connects Provinces over Water)</h4>
-        <h4><svg width="3em" height="3em"><use href="#mountain"></use></svg> Mountains (Impassible)</h4>
-        <h4><svg width="3em" height="3em"><use href="#blob" class="sea"/></svg> Sea / Estuary (Navigable)</h4>
-        <h4><svg width="3em" height="3em"><use href="#blob" class="river"/></svg> Lake / River (Impassible)</h4>
+        <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#castle"></use></svg> Stronghold (Levy Troops)</h4>
+        <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#barrel"></use></svg> Stockpile (Army Supply)</h4>
+        <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#crown"></use></svg> Palace (Cultural Prestige)</h4>
+        <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#bridge"></use></svg> Bridge (Connects Provinces over Water)</h4>
+        <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#mountain"></use></svg> Mountains (Impassible)</h4>
+        <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#blob" class="sea"/></svg> Sea / Estuary (Navigable)</h4>
+        <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#blob" class="river"/></svg> Lake / River (Impassible)</h4>
       </div>
       <div id="trade_goods">
         <h2>Trade Goods</h2>
-            {% for good in site.data.gamestate.trade_goods %}
-              {% include trade_good.html content=good %}
-            {% endfor %}
+            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#iron"></use></svg> iron</h4>
+            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#oil"></use></svg> oil</h4>
+            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#lumber"></use></svg> lumber</h4>
+            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#silver"></use></svg> silver</h4>
+            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#spices"></use></svg> spices</h4>
+            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#textiles"></use></svg> textiles</h4>
+            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#gold"></use></svg> gold</h4>
+            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#wine"></use></svg> wine</h4>
+            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#furs"></use></svg> furs</h4>
+            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#gems"></use></svg> gems</h4>
+            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#pearls"></use></svg> pearls</h4>
       </div>
       <div id="noble_houses">
         <h2>Noble Houses of the<br/>Emerald Kingdoms</h2>
