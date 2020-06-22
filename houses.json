@@ -28,7 +28,7 @@
 		"gold":18,
 		"motto":"Deliberate amid Action",
 		"seat":"pinehurst",
-		"seat_location":{"x":870,"y":570},
+		"seat_location":{"x":860,"y":550},
 		"territories":[
 			"ronald",
 			"ridgecrest",
@@ -177,6 +177,7 @@
 		"gold":5,
 		"motto":"Deeds, not Words",
 		"seat":"admiral_heights",
+		"seat_location":{"x":340,"y":1945},
 		"territories":[
 			"alki",
 			"admiral_heights",
@@ -402,6 +403,7 @@
 		"gold":0,
 		"motto":"Illuminate the Dark",
 		"seat":"magnuson_park",
+		"seat_location":{"x":1320,"y":1010},
 		"territories":[
 			"ravenna",
 			"nordheim",

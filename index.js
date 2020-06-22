@@ -80,7 +80,7 @@ $(document).ready(function() {
         // TODO: dynamically populate the house list
 
         //color the house territories
-        //redrawHouseBorders();
+        redrawHouseBorders();
 
         //redraw the house seats
         redrawHouseSeats();
