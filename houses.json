@@ -49,6 +49,7 @@
 		"gold":0,
 		"motto":"Born of Fire",
 		"seat":"ashton_hall",
+		"seat_location":{"x":550,"y":1290},
 		"territories":["ashton_hall"],
 		"kingdom":"",
 		"active":true
@@ -115,6 +116,7 @@
 		"gold":0,
 		"motto":"Boldly going where angels fear to tread",
 		"seat":"the_landing",
+		"seat_location":{"x":1700,"y":2570},
 		"territories":[
 			"the_landing",
 			"liberty_park",
@@ -236,6 +238,7 @@
 		"gold":1,
 		"motto":"The Day Sows; The Night Reaps",
 		"seat":"garrison_creek",
+		"seat_location":{"x":1600,"y":2990},
 		"territories":[
 			"crystal_springs",
 			"southgate",
@@ -429,6 +432,7 @@
 		"gold":0,
 		"motto":"Through it all unbowed",
 		"seat":"roseburg",
+		"seat_location":{"x":975,"y":2550},
 		"territories":[
 			"glendale",
 			"roseburg"
@@ -496,6 +500,7 @@
 		"gold":15,
 		"motto":"Only the Stones Remain Unconquered",
 		"seat":"rainier_valley_north",
+		"seat_location":{"x":1135,"y":1970},
 		"territories":[
 			"the_central_massif",
 			"yesler_terrace",
@@ -531,6 +536,7 @@
 		"gold":9,
 		"motto":"Tides of Fate",
 		"seat":"black_river",
+		"seat_location":{"x":1515,"y":2755},
 		"territories":[
 			"lakeridge",
 			"allentown",
@@ -553,7 +559,7 @@
 		"gold":11,
 		"motto":"By Land, By Sea",
 		"seat":"montlake",
-		"seat_location":{"x":905,"y":1310},
+		"seat_location":{"x":905,"y":1325},
 		"territories":[
 			"montlake",
 			"broadmoor",

@@ -49,6 +49,7 @@ function redrawHouseSeats() {
 
     //draw new icons
     houses.forEach(function(house, index){
+        if (!house.active) return;
         if(loglevel > 1) console.log("info: redrawing " + house.name);
 
         var seat = $("#" + house.seat);
