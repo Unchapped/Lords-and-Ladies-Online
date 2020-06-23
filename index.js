@@ -71,6 +71,45 @@ function redrawHouseSeats() {
     if(loglevel > 0) console.log("done redrawing house seats.");
 }
 
+//(re)draw house list
+function redrawHouseList() {
+    if(loglevel > 0) console.log("redrawing house list... ");
+
+    //find and clear existing list
+    var list = $("#noble_houses>.list");
+    list.empty();
+    if(list.length = 0) {
+        console.log("Error:missing house list container, cannot redraw.");
+        return;
+    }
+
+    //draw new list items
+    houses.forEach(function(house, index){
+        if (!house.active) return;
+        if(loglevel > 1) console.log("info: redrawing " + house.name);
+
+        //Create DOM object
+        var content = '<div class="house" id="' + house.name + '">'
+        content += '<span class="heraldry"><img src = "images/houses/' + house.name + '.png" /></span>';
+        content += '<h3>' + house.name + '</h3>';
+        content += '<h4>"' +house.motto +'"</h4>';
+        if (house.player == "NPC") {
+            content += '<span class="player"><i class="fas fa-user"></i> ' + house.player + '</span>';
+        } else {
+            content += '<span class="player"><i class="fas fa-robot"></i> NPC</span>';
+        }
+        content += '<span class="race"><i class="fas fa-flag"></i> ' + house.race + '</span>'
+        content += '</div>';
+
+        var e = $(content);
+        console.log(content);
+        list.append(e); // put it into the DOM    
+    });
+
+    if(loglevel > 0) console.log("done redrawing house list.");
+}
+
+
 $(document).ready(function() {
     /* populate global variables*/
     map_root = $("#map_root");
@@ -84,5 +123,10 @@ $(document).ready(function() {
 
         //redraw the house seats
         redrawHouseSeats();
+        
+        //(re)draw house list
+        redrawHouseList();
+
+
     });
 });
