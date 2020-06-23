@@ -116,7 +116,7 @@
 		"gold":0,
 		"motto":"Boldly going where angels fear to tread",
 		"seat":"the_landing",
-		"seat_location":{"x":1700,"y":2570},
+		"seat_location":{"x":1690,"y":2560},
 		"territories":[
 			"the_landing",
 			"liberty_park",
@@ -165,6 +165,7 @@
 		"gold":0,
 		"motto":"Cross at your Peril",
 		"seat":"west_point",
+		"seat_location":{"x":110,"y":1195},
 		"territories":["west_point"],
 		"kingdom":"",
 		"active":true
@@ -239,7 +240,7 @@
 		"gold":1,
 		"motto":"The Day Sows; The Night Reaps",
 		"seat":"garrison_creek",
-		"seat_location":{"x":1600,"y":2990},
+		"seat_location":{"x":1590,"y":2990},
 		"territories":[
 			"crystal_springs",
 			"southgate",
@@ -302,6 +303,7 @@
 		"gold":0, 
 		"motto":"Our Faith is our Fortress", 
 		"seat":"the_wedgewood", 
+		"seat_location":{"x":1085,"y":870},
 		"territories":[
 			"the_wedgewood",
 			"chelsea"
@@ -373,7 +375,7 @@
 		"gold":0,
 		"motto":"At home in the field",
 		"seat":"fort_lawton",
-		"seat_location":{"x":140,"y":1060},
+		"seat_location":{"x":120,"y":1060},
 		"territories":[
 			"fort_lawton",
 			"the_armoury"
@@ -422,7 +424,7 @@
 		"gold":0,
 		"motto":"Honor and Glory",
 		"seat":"stevens",
-		"seat_location":{"x":975,"y":1445},
+		"seat_location":{"x":985,"y":1430},
 		"territories":["stevens"],
 		"kingdom":"",
 		"active":true
@@ -538,7 +540,7 @@
 		"gold":9,
 		"motto":"Tides of Fate",
 		"seat":"black_river",
-		"seat_location":{"x":1515,"y":2755},
+		"seat_location":{"x":1500,"y":2770},
 		"territories":[
 			"lakeridge",
 			"allentown",

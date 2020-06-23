@@ -67,11 +67,6 @@ body>svg {
     fill-opacity:0.75;
     stroke-width: 0px;
   }
-
-  g:hover>path {
-    fill-opacity:1.0;
-    stroke-width: 5px;
-  }
 }  
 
 /* symbol colors */
@@ -79,6 +74,7 @@ symbol path{
   stroke-width: 5px;
   stroke: black;
 }
+
 symbol#barrel path {fill: saddlebrown;}
 symbol#barrel path.lid {fill: saddlebrown;}
 symbol#barrel path.rings {fill: #555555;}
@@ -151,10 +147,18 @@ symbol#lumber path.dark {fill: darkgreen;}
 
 #noble_houses {
   width: 30vw;
+  .controls {
+    padding: 5px;
+    .selected { font-weight: bold;}
+  }
   .list {
     height: 70vw;
     overflow-x:hidden;
     overflow-y:auto;
+    div {
+      padding: 5px;
+      border-radius: 10px;
+    }
   }
 }
 
@@ -192,6 +196,14 @@ image.heraldry {
 .owned .land{
   stroke-width: 3px;
 }
+
+
+/* mouseover highlight effects */
+g:hover>path, .highlight .land{
+  fill-opacity:1.0;
+  stroke-width: 6px;
+}
+div.highlight {border: 1px solid black;}
 
 .acosta {
   .land{fill: red; stroke: white;}

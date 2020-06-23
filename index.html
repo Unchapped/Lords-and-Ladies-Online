@@ -48,16 +48,15 @@
       <div id="noble_houses">
         <h2>Noble Houses of the<br/>Emerald Kingdoms</h2>
         <div class="controls">
-          <span> Sort: 
-          <a><i class="fas fa-sort-alpha-down"></i></a>
-          <a><i class="fas fa-sitemap"></i></a>
-          <a><i class="fas fa-user"></i></a>
-          <a><i class="fas fa-flag"></i></a>
+          <span>Sort: </span>
+          <a id="sort_alpha_asc" class="sort_button selected" style="display: none;"><i class="fas fa-sort-alpha-down"></i></a>
+          <a id="sort_alpha_desc" class="sort_button selected"><i class="fa fa-sort-alpha-up"></i></a>
+          <a id="sort_rank" class="sort_button"><i class="fas fa-sitemap"></i></a>
+          <a id="sort_player" class="sort_button"><i class="fas fa-user"></i></a>
+          <a id="sort_race" class="sort_button"><i class="fas fa-flag"></i></a>
+          <a id="sort_kingdom" class="sort_button"><i class='fas fa-crown'></i></a>
         </div>
         <div class="list">
-            {% for house in site.data.gamestate.houses %}
-              {% include house.html content=house %}
-            {% endfor %}
         </div>
       </div>
     </div>

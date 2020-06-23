@@ -6,7 +6,8 @@
 var loglevel = 1; //0 = errors only, higher numbers mean more detail
 
 /* get a pointer to the main SVG map*/
-var map_root
+var map_root;
+var house_list;
 /* downloaded house data from the server and populate the map */
 var houses;
 
@@ -72,16 +73,11 @@ function redrawHouseSeats() {
 }
 
 //(re)draw house list
-function redrawHouseList() {
+function redrawHouseList(draw_headers=false, header_attribute="name") {
     if(loglevel > 0) console.log("redrawing house list... ");
 
     //find and clear existing list
-    var list = $("#noble_houses>.list");
-    list.empty();
-    if(list.length = 0) {
-        console.log("Error:missing house list container, cannot redraw.");
-        return;
-    }
+    house_list.empty();
 
     //draw new list items
     houses.forEach(function(house, index){
@@ -89,7 +85,7 @@ function redrawHouseList() {
         if(loglevel > 1) console.log("info: redrawing " + house.name);
 
         //Create DOM object
-        var content = '<div class="house" id="' + house.name + '">'
+        var content = '<div id="' + house.name.toLowerCase() + '" class="house ' + house.name.toLowerCase() + '">'
         content += '<span class="heraldry"><img src = "images/houses/' + house.name + '.png" /></span>';
         content += '<h3>' + house.name + '</h3>';
         content += '<h4>"' +house.motto +'"</h4>';
@@ -101,18 +97,38 @@ function redrawHouseList() {
         content += '<span class="race"><i class="fas fa-flag"></i> ' + house.race + '</span>'
         content += '</div>';
 
-        var e = $(content);
-        console.log(content);
-        list.append(e); // put it into the DOM    
+        house_list.append(content); // put it into the DOM    
+    });
+
+    //add mouse handlers here.
+    house_list.children("div").mouseover(function(e){
+        $("." + $(this).attr('id').toLowerCase()).addClass("highlight");
+    });
+
+    house_list.children("div").mouseout(function(e){
+        $("." + $(this).attr('id').toLowerCase()).removeClass("highlight");
     });
 
     if(loglevel > 0) console.log("done redrawing house list.");
 }
 
 
+
+
 $(document).ready(function() {
     /* populate global variables*/
     map_root = $("#map_root");
+    if(map_root.length != 1) {
+        console.log("Error:missing house list container, cannot redraw.");
+        return;
+    }
+
+    house_list = $("#noble_houses>.list");
+    if(house_list.length != 1) {
+        console.log("Error:missing house list container, cannot redraw.");
+        return;
+    }
+
     $.getJSON('houses.json', function(data) {
         houses = data;
         
@@ -129,4 +145,25 @@ $(document).ready(function() {
 
 
     });
+
+    //set up sorting functions
+    $("#sort_alpha_asc").click(function () {
+        houses.sort(function(a, b) {return (b.name) < (a.name) ? 1 : -1;});
+        $("#sort_alpha_asc").hide()
+        $("#sort_alpha_desc").show()
+        redrawHouseList();
+    });
+
+    $("#sort_alpha_desc").click(function () {
+        houses.sort(function(a, b) {return (b.name) < (a.name) ? -1 : 1;});
+        $("#sort_alpha_desc").hide()
+        $("#sort_alpha_asc").show()
+        redrawHouseList();
+    });
+
+    //TODO, add sorting for rank (needs data too), race and kingdom.
+
+
+
+
 });
