@@ -18,6 +18,8 @@
 			"georgetown"
 		],
 		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 		"active":true
 	},
 	{"name":"Andover", "player":"NPC", "race":"Rio", "gold":0, "motto":"Judge not lest ye be judged", "seat":"null", "territories":[], "kingdom":"", "active":false},
@@ -40,6 +42,8 @@
 			"the_riviera"
 		],
 		"kingdom":"",
+		"rank":"Ducal",
+		"rank_order": 3,
 		"active":true
 	},
 	{
@@ -52,6 +56,8 @@
 		"seat_location":{"x":550,"y":1290},
 		"territories":["ashton_hall"],
 		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 		"active":true
 	},
 	{
@@ -72,6 +78,8 @@
 			"fremont"
 		],
 		"kingdom":"",
+		"rank":"Ducal",
+		"rank_order": 3,
 		"active":true
 	},
 	{
@@ -95,6 +103,8 @@
 
 		],
 		"kingdom":"",
+		"rank":"Archducal",
+		"rank_order": 2,
 		"active":true
 	},
 	{
@@ -106,6 +116,8 @@
 		"seat":"the_bluffs",
 		"territories":["the_bluffs"],
 		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 		"active":true
 	},
 	{"name":"Bitter", "player":"NPC", "race":"Magnol", "gold":0, "motto":"The Proud Die the Same", "seat":"null", "territories":[], "kingdom":"", "active":false},
@@ -123,6 +135,8 @@
 			"the_eastern_highlands"
 		],
 		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 		"active":true
 	},
 	{
@@ -135,6 +149,8 @@
 		"seat_location":{"x":760,"y":480},
 		"territories":["lake_meridian"], 
 		"kingdom":"", 
+		"rank":"Comital",
+		"rank_order": 4,
 		"active":true
 	},
 	{	
@@ -156,6 +172,8 @@
 			"phinney"
 		],
 		"kingdom":"",
+		"rank":"Archducal",
+		"rank_order": 2,
 		"active":true
 	},
 	{
@@ -168,6 +186,8 @@
 		"seat_location":{"x":110,"y":1195},
 		"territories":["west_point"],
 		"kingdom":"",
+		"rank":"Ducal",
+		"rank_order": 3,
 		"active":true
 	},
 	{"name":"Channon", "player":"NPC", "race":"Lagante", "gold":0, "motto":"Standing Strong", "seat":"null", "territories":[], "kingdom":"", "active":false},
@@ -189,6 +209,8 @@
 			"endolyne"
 		],
 		"kingdom":"",
+		"rank":"Principal",
+		"rank_order": 1,
 		"active":true
 	},
 	{
@@ -203,6 +225,8 @@
 			"kinnear"
 		],
 		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 		"active":true
 	},
 	{
@@ -217,6 +241,8 @@
 			"fairmount"
 		],
 		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 		"active":true
 	},
 	{
@@ -231,6 +257,8 @@
 			"fairwood"
 		],
 		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 		"active":true
 	},
 	{
@@ -252,6 +280,8 @@
 			"emerald_downs"
 		],
 		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 		"active":true
 	},
 	{
@@ -263,6 +293,8 @@
 		"seat":"columbia",
 		"territories":["columbia"],
 		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 		"active":true
 	},
 	{
@@ -277,6 +309,8 @@
 			"evansville"
 		],
 		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 		"active":true
 	},
 	{
@@ -294,6 +328,8 @@
 			"fosters_field"
 		],
 		"kingdom":"",
+		"rank":"Principal",
+		"rank_order": 1,
 		"active":true
 	},
 	{
@@ -308,7 +344,9 @@
 			"the_wedgewood",
 			"chelsea"
 		], 
-		"kingdom":"", 
+		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 		"active":true
 	},
 	{
@@ -324,6 +362,8 @@
 			"madrona"
 		],
 		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 		"active":true
 	},
 	{
@@ -338,7 +378,9 @@
 			"kent",
 			"meridian"
 		], 
-		"kingdom":"", 
+		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4, 
 		"active":true
 	},
 	{
@@ -351,6 +393,8 @@
 		"seat_location":{"x":625,"y":2060},
 		"territories":["pigeon_point"],
 		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 		"active":true
 	},
 	{"name":"Klickitat", "player":"NPC", "race":"Rio", "gold":0, "motto":"From our Ships come all that is Good", "seat":"null", "territories":[], "kingdom":"", "active":false},
@@ -366,6 +410,8 @@
 			"allentown"
 		],
 		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 	"active":false
 	},
 	{
@@ -381,6 +427,8 @@
 			"the_armoury"
 		],
 		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 	"active":true
 	},
 
@@ -396,6 +444,8 @@
 			"tukwila_heights"
 		],
 		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 		"active":true
 	},
 	{
@@ -415,6 +465,8 @@
 			"the_proving_grounds"
 		],
 		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 		"active":true
 	},
 	{
@@ -427,6 +479,8 @@
 		"seat_location":{"x":985,"y":1430},
 		"territories":["stevens"],
 		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 		"active":true
 	},
 	{
@@ -442,6 +496,8 @@
 			"roseburg"
 		],
 		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 		"active":true
 	},
 	{
@@ -463,6 +519,8 @@
 			"briarcrest"
 		],
 		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 		"active":true
 	},
 	{
@@ -483,6 +541,8 @@
 			
 		],
 		"kingdom":"",
+		"rank":"Ducal",
+		"rank_order": 3,
 		"active":true
 	},
 	{
@@ -494,6 +554,8 @@
 		"seat":"the_queens_land",
 		"territories":["the_queens_land"],
 		"kingdom":"",
+		"rank":"Royal",
+		"rank_order": 0,
 		"active":true
 	},
 	{"name":"Sheridan", "player":"NPC", "race":"Lagante", "gold":0, "motto":"Catch us if you can", "seat":"null", "territories":[], "kingdom":"", "active":false},
@@ -514,6 +576,8 @@
 			"rainier_valley_south"
 		], 
 		"kingdom":"",
+		"rank":"Ducal",
+		"rank_order": 3,
 		"active":true
 	},
 	{
@@ -531,6 +595,8 @@
 			"the_university"
 		],
 		"kingdom":"",
+		"rank":"Comital",
+		"rank_order": 4,
 		"active":true
 	},
 	{
@@ -554,6 +620,8 @@
 			"benson"
 		],
 		"kingdom":"",
+		"rank":"Ducal",
+		"rank_order": 3,
 		"active":true
 	},
 	{
@@ -573,6 +641,8 @@
 			"mayfair"
 		],
 		"kingdom":"",
+		"rank":"Principal",
+		"rank_order": 1,
 		"active":true
 	}
 ]

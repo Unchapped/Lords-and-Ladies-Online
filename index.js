@@ -73,7 +73,7 @@ function redrawHouseSeats() {
 }
 
 //(re)draw house list
-function redrawHouseList(draw_headers=false, header_attribute="name") {
+function redrawHouseList() {
     if(loglevel > 0) console.log("redrawing house list... ");
 
     //find and clear existing list
@@ -89,11 +89,12 @@ function redrawHouseList(draw_headers=false, header_attribute="name") {
         content += '<span class="heraldry"><img src = "images/houses/' + house.name + '.png" /></span>';
         content += '<h3>' + house.name + '</h3>';
         content += '<h4>"' +house.motto +'"</h4>';
-        if (house.player == "NPC") {
+        if (house.player != "NPC") {
             content += '<span class="player"><i class="fas fa-user"></i> ' + house.player + '</span>';
         } else {
             content += '<span class="player"><i class="fas fa-robot"></i> NPC</span>';
         }
+        content += '<span class="rank"><i class="fas fa-sitemap"></i> ' + house.rank + '</span>'
         content += '<span class="race"><i class="fas fa-flag"></i> ' + house.race + '</span>'
         content += '</div>';
 
@@ -113,7 +114,57 @@ function redrawHouseList(draw_headers=false, header_attribute="name") {
 }
 
 
+//sort house list
+function sortHouseList(attr = "name", header_attr = "null", order = 1) {
+    if(loglevel > 0) console.log("sorting house list by " + attr + "... ");
+    //sort the list
+    houses.sort(function(a, b) {
+        if (b[attr] < a[attr]) {
+            return order
+        } else if (b[attr] == a[attr]) { //use name as a tiebreaker
+            return (b.name) < (a.name) ? 1 : -1;
+        } else {
+         return 0-order;
+        }
+    });
 
+    //clear the headers
+    house_list.children(".header").remove();
+
+    var last_group = "null";
+    houses.forEach(function(house, index){
+        if (!house.active || house[attr] == undefined) return;
+        if (header_attr != "null" && house[header_attr] != last_group) {
+            last_group = house[header_attr];
+            var content = '<div class="header ' + house[header_attr].toLowerCase() + '"><h2>' + house[header_attr] + '</h2></div>';
+            house_list.append(content);
+        }
+        if(loglevel > 1) console.log(house.name + ": " + house[attr] + " =>" + house[header_attr]);
+        house_list.children("#" + house.name.toLowerCase()).appendTo(house_list);
+    });
+    if(loglevel > 0) console.log("done sorting house list.");
+}
+
+//set highlight mode
+function setHighlightMode(attr = "name") {
+    if(loglevel > 0) console.log("setting highlight mode to: " + attr + "... ");
+
+    //create a new static variable, so we can clear old highlights
+    if( typeof setHighlightMode.prev_attr == 'undefined' )  setHighlightMode.prev_attr = "name";
+
+    houses.forEach(function(house, index){
+        if (!house.active || house[attr] == undefined || house[setHighlightMode.prev_attr] == undefined) return;
+
+        //clear existing highlights.
+        var lands = $("." + house.name.toLowerCase());
+        if(setHighlightMode.prev_attr != "name") lands.removeClass(house[setHighlightMode.prev_attr].toLowerCase());
+        lands.addClass(house[attr].toLowerCase());
+    });
+
+    setHighlightMode.prev_attr = attr;
+
+    if(loglevel > 0) console.log("done setting highlight mode.");
+}
 
 $(document).ready(function() {
     /* populate global variables*/
@@ -148,22 +199,49 @@ $(document).ready(function() {
 
     //set up sorting functions
     $("#sort_alpha_asc").click(function () {
-        houses.sort(function(a, b) {return (b.name) < (a.name) ? 1 : -1;});
+        sortHouseList();
+        setHighlightMode(undefined);
         $("#sort_alpha_asc").hide()
         $("#sort_alpha_desc").show()
-        redrawHouseList();
+        $(".sort_button").removeClass("selected");
+        $("#sort_alpha_desc").addClass("selected");
     });
 
     $("#sort_alpha_desc").click(function () {
-        houses.sort(function(a, b) {return (b.name) < (a.name) ? -1 : 1;});
+        sortHouseList(undefined, undefined, -1);
+        setHighlightMode(undefined);
         $("#sort_alpha_desc").hide()
         $("#sort_alpha_asc").show()
-        redrawHouseList();
+        $(".sort_button").removeClass("selected");
+        $("#sort_alpha_asc").addClass("selected");
     });
 
-    //TODO, add sorting for rank (needs data too), race and kingdom.
+    
+    $("#sort_rank").click(function () {
+        sortHouseList("rank_order", "rank", 1);
+        setHighlightMode("rank");
+        $(".sort_button").removeClass("selected");
+        $("#sort_rank").addClass("selected");
+    });
 
+    $("#sort_race").click(function () {
+        sortHouseList("race", "race", 1);
+        setHighlightMode("race");
+        $(".sort_button").removeClass("selected");
+        $("#sort_race").addClass("selected");
+    });
 
+    $("#sort_player").click(function () {
+        sortHouseList("player", undefined, 1);
+        setHighlightMode(undefined);
+        $(".sort_button").removeClass("selected");
+        $("#sort_player").addClass("selected");
+    });
 
-
+    $("#sort_kingdom").click(function () {
+        sortHouseList("kingdom", "kingdom", 1);
+        setHighlightMode("kingdom");
+        $(".sort_button").removeClass("selected");
+        $("#sort_kingdom").addClass("selected");
+    });
 });

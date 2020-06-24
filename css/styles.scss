@@ -149,7 +149,20 @@ symbol#lumber path.dark {fill: darkgreen;}
   width: 30vw;
   .controls {
     padding: 5px;
-    .selected { font-weight: bold;}
+    span {font-weight: bold}
+    a {
+      display: inline-block;
+      width: 5em;
+      border: 1px solid black;
+      margin: 2px;
+      border-radius: 5px;
+      &.selected {
+        background-color: rgba(0, 0, 0, 0.25);
+        border-width: 2px
+      }
+    }
+
+
   }
   .list {
     height: 70vw;
@@ -168,7 +181,7 @@ symbol#lumber path.dark {fill: darkgreen;}
   grid-template-rows: auto auto;
   grid-template-areas: 
     "logo name motto motto"
-    "logo player player race";
+    "logo player race rank";
 
   .heraldry {
     text-align: center;
@@ -177,6 +190,7 @@ symbol#lumber path.dark {fill: darkgreen;}
   }
   .player{grid-area: player;}
   .race{grid-area: race;}
+  .rank{grid-area: rank;}
   h3{grid-area: name;}
   h4{grid-area: motto;}
 
@@ -374,4 +388,84 @@ div.highlight {border: 1px solid black;}
 .westshore {
   .land{fill:seashell; stroke: royalblue;}
   use{color: gold}
+}
+
+
+/* race colors */
+
+.lagante {
+  background-color: rgba(34, 139, 34, 0.75); /* Forest Green */
+  .land{
+    fill: forestgreen;
+    stroke-width: 0px;}
+  use{color: gold}
+}
+
+
+.lucian {
+  background-color: rgba(255, 215, 0, 0.75); /* gold */
+  .land{
+    fill: gold;
+    stroke-width: 0px;}
+  use{color: indigo}
+}
+
+.magnol {
+  background-color: rgba(255, 0, 0, 0.75); /* red */
+  .land{
+    fill:red;
+    stroke-width: 0px;}
+  use{color: white}
+}
+
+.rio {
+  background-color: rgba(65, 105, 225, 0.75); /* royalblue */
+  .land{
+    fill: royalblue;
+    stroke-width: 0px;}
+  use{color: red}
+}
+
+
+/* rank colors */
+
+.royal {
+  background-color: rgba(255, 176, 0, 0.75);
+  .land{
+    fill: rgb(255, 176, 0);
+    stroke-width: 0px;}
+  use{color: black}
+}
+
+
+.principal {
+  background-color: rgba(254, 97, 0, 0.75);
+  .land{
+    fill: rgb(254, 97, 0);
+    stroke-width: 0px;}
+  use{color: black}
+}
+
+.archducal {
+  background-color: rgba(220, 38, 127, 0.75);
+  .land{
+    fill: rgb(220, 38, 127);
+    stroke-width: 0px;}
+  use{color: black}
+}
+
+.ducal {
+  background-color: rgba(120, 94, 240, 0.75);
+  .land{
+    fill: rgb(120, 94, 240);
+    stroke-width: 0px;}
+  use{color: black}
+}
+
+.comital {
+  background-color: rgba(100, 143, 255, 0.75);
+  .land{
+    fill: rgb(100, 143, 255);
+    stroke-width: 0px;}
+  use{color: black}
 }
