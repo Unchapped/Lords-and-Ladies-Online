@@ -119,6 +119,11 @@ function sortHouseList(attr = "name", header_attr = "null", order = 1) {
     if(loglevel > 0) console.log("sorting house list by " + attr + "... ");
     //sort the list
     houses.sort(function(a, b) {
+        //filter dirty data to the bottom of the list
+        if(a[attr] == undefined) return order;
+        if(b[attr] == undefined) return 0-order;
+
+        //compare valid attributes
         if (b[attr] < a[attr]) {
             return order
         } else if (b[attr] == a[attr]) { //use name as a tiebreaker
