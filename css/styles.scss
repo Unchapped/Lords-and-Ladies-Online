@@ -428,18 +428,30 @@ div.highlight {border: 1px solid black;}
 
 
 /* rank colors */
+.header {
+  height: 5em;
+  background-size: 5em 5em;
+  background-repeat: no-repeat;
+  background-position: center;
+  h2 {margin-top: 1.5em;}
+}
+
+.header.royal {
+  background-image: url("../images/royal.svg");
+}
 
 .royal {
-  background-color: rgba(255, 176, 0, 0.75);
   .land{
     fill: rgb(255, 176, 0);
     stroke-width: 0px;}
   use{color: black}
 }
 
+.header.principal {
+  background-image: url("../images/principal.svg");
+}
 
 .principal {
-  background-color: rgba(254, 97, 0, 0.75);
   .land{
     fill: rgb(254, 97, 0);
     stroke-width: 0px;}
