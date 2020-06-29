@@ -458,24 +458,37 @@ div.highlight {border: 1px solid black;}
   use{color: black}
 }
 
+.header.archducal {
+  background-image: url("../images/archducal.svg");
+}
+
 .archducal {
-  background-color: rgba(220, 38, 127, 0.75);
+  /* background-color: rgba(220, 38, 127, 0.75); */
   .land{
     fill: rgb(220, 38, 127);
     stroke-width: 0px;}
   use{color: black}
 }
 
+.header.ducal {
+  background-image: url("../images/ducal.svg");
+}
+
+
 .ducal {
-  background-color: rgba(120, 94, 240, 0.75);
+  /* background-color: rgba(120, 94, 240, 0.75); */
   .land{
     fill: rgb(120, 94, 240);
     stroke-width: 0px;}
   use{color: black}
 }
 
+.header.comital {
+  background-image: url("../images/comital.svg");
+}
+
 .comital {
-  background-color: rgba(100, 143, 255, 0.75);
+  /* background-color: rgba(100, 143, 255, 0.75); */
   .land{
     fill: rgb(100, 143, 255);
     stroke-width: 0px;}
