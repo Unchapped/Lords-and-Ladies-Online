@@ -11,8 +11,10 @@ var house_list;
 /* downloaded house data from the server and populate the map */
 var houses;
 
-/* useful for adding centered content to an SVG group */
+/* basic rapper around the GET parameters of the window, so we can modify them live. Definition is in document.ready below */
+var live_params;
 
+/* useful for adding centered content to an SVG group */
 function addSvgCenteredObject(container, element) {
         var containerBox = container.getBBox();
         container.appendChild(element);
@@ -185,6 +187,22 @@ $(document).ready(function() {
         return;
     }
 
+    live_params = {
+        params: new URLSearchParams(window.location.search),
+        set: function (key, value) {
+            this.params.set(key, value);
+            history.pushState({}, "", window.location.origin + window.location.pathname + "?" + this.params.toString());
+        },
+
+        get: function (key) {return this.params.get(key);},
+
+        autosort: function () {
+            var sort_default = $("#sort_" + this.params.get('sort'));
+            if (sort_default.length != 0) sort_default[0].click();
+        }
+    };
+
+
     $.getJSON('houses.json', function(data) {
         houses = data;
         
@@ -199,11 +217,13 @@ $(document).ready(function() {
         //(re)draw house list
         redrawHouseList();
 
-
+        //sort the house list based on input Get requests.
+        live_params.autosort();
     });
 
     //set up sorting functions
     $("#sort_alpha_asc").click(function () {
+        live_params.set("sort", "alpha_asc");
         sortHouseList();
         setHighlightMode(undefined);
         $("#sort_alpha_asc").hide()
@@ -213,6 +233,7 @@ $(document).ready(function() {
     });
 
     $("#sort_alpha_desc").click(function () {
+        live_params.set("sort", "alpha_desc");
         sortHouseList(undefined, undefined, -1);
         setHighlightMode(undefined);
         $("#sort_alpha_desc").hide()
@@ -223,6 +244,7 @@ $(document).ready(function() {
 
     
     $("#sort_rank").click(function () {
+        live_params.set("sort", "rank");
         sortHouseList("rank_order", "rank", 1);
         setHighlightMode("rank");
         $(".sort_button").removeClass("selected");
@@ -230,6 +252,7 @@ $(document).ready(function() {
     });
 
     $("#sort_race").click(function () {
+        live_params.set("sort", "race");
         sortHouseList("race", "race", 1);
         setHighlightMode("race");
         $(".sort_button").removeClass("selected");
@@ -237,6 +260,7 @@ $(document).ready(function() {
     });
 
     $("#sort_player").click(function () {
+        live_params.set("sort", "player");
         sortHouseList("player", undefined, 1);
         setHighlightMode(undefined);
         $(".sort_button").removeClass("selected");
@@ -244,6 +268,7 @@ $(document).ready(function() {
     });
 
     $("#sort_kingdom").click(function () {
+        live_params.set("sort", "kingdom");
         sortHouseList("kingdom", "kingdom", 1);
         setHighlightMode("kingdom");
         $(".sort_button").removeClass("selected");
