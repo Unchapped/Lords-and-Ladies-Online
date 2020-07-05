@@ -16,48 +16,56 @@
     <![endif]-->
   </head>
   <body>
-    {% include emerald_kingdom.svg %}
-    <div id="menu_box">
-      <h3>A True and Correct Map of the </h3>
-      <h1>Emerald Kingdoms</h1>
-      <img src="images/horizontal-rule.svg", width=80% height="40px" /><!-- public domain per https://freesvg.org/1539645636 -->
-      <div id="map_key">
-        <h2>Map Key</h2>
-        <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#castle"></use></svg> Stronghold (Levy Troops)</h4>
-        <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#barrel"></use></svg> Stockpile (Army Supply)</h4>
-        <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#crown"></use></svg> Palace (Cultural Prestige)</h4>
-        <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#bridge"></use></svg> Bridge (Connects Provinces over Water)</h4>
-        <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#mountain"></use></svg> Mountains (Impassible)</h4>
-        <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#blob" class="sea"/></svg> Sea / Estuary (Navigable)</h4>
-        <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#blob" class="river"/></svg> Lake / River (Impassible)</h4>
-      </div>
-      <div id="trade_goods">
-        <h2>Trade Goods</h2>
-            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#iron"></use></svg> iron</h4>
-            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#oil"></use></svg> oil</h4>
-            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#lumber"></use></svg> lumber</h4>
-            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#silver"></use></svg> silver</h4>
-            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#spices"></use></svg> spices</h4>
-            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#textiles"></use></svg> textiles</h4>
-            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#gold"></use></svg> gold</h4>
-            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#wine"></use></svg> wine</h4>
-            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#furs"></use></svg> furs</h4>
-            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#gems"></use></svg> gems</h4>
-            <h4><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#pearls"></use></svg> pearls</h4>
-      </div>
-      <div id="noble_houses">
-        <h2>Noble Houses of the<br/>Emerald Kingdoms</h2>
-        <div class="controls">
-          <span>Sort: </span>
-          <a id="sort_alpha_asc" class="sort_button selected" style="display: none;"><i class="fas fa-sort-alpha-down"></i></a>
-          <a id="sort_alpha_desc" class="sort_button selected"><i class="fa fa-sort-alpha-up"></i></a>
-          <a id="sort_rank" class="sort_button"><i class="fas fa-sitemap"></i></a>
-          <a id="sort_player" class="sort_button"><i class="fas fa-user"></i></a>
-          <a id="sort_race" class="sort_button"><i class="fas fa-flag"></i></a>
-          <!-- <a id="sort_kingdom" class="sort_button"><i class='fas fa-crown'></i></a> -->
+    <div id="map">
+      {% include emerald_kingdom.svg %}
+      <div id="menu_box">
+        <h3>A True and Correct Map of the </h3>
+        <h1>Emerald Kingdoms</h1>
+        <img src="images/horizontal-rule.svg", width=80% height="40px" /><!-- public domain per https://freesvg.org/1539645636 -->
+        <div id="map_key">
+          <h2>Map Key</h2>
+          <li><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#castle"></use></svg><h4>Stronghold<br />(Levy Troops)</h4></li>
+          <li><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#barrel"></use></svg><h4>Stockpile<br />(Army Supply)</h4></li>
+          <li><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#crown"></use></svg><h4>Palace<br />(Cultural Prestige)</h4></li>
+          <li><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#bridge"></use></svg><h4>Bridge<br />(Connects Provinces)</h4></li>
+          <li><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#mountain"></use></svg><h4>Mountains<br />(Impassible)</h4></li>
+          <li><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#blob" class="sea"/></svg><h4>Sea / Estuary<br />(Navigable)</h4></li>
+          <li></li>
+          <li><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#blob" class="river"/></svg><h4>Lake / River<br />(Impassible)</h4></li>
         </div>
-        <div class="list">
+        <div id="trade_goods">
+          <h2>Trade Goods</h2>
+              <li><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#iron"></use></svg><h4>Iron</h4></li>
+              <li><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#oil"></use></svg><h4>Oil</h4></li>
+              <li><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#lumber"></use></svg><h4>Lumber</h4></li>
+              <li><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#silver"></use></svg><h4>Silver</h4></li>
+              <li><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#spices"></use></svg><h4>Spices</h4></li>
+              <li><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#textiles"></use></svg><h4>Textiles</h4></li>
+              <li><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#gold"></use></svg><h4>Gold</h4></li>
+              <li><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#wine"></use></svg><h4>Wine</h4></li>
+              <li><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#furs"></use></svg><h4>Furs</h4></li>
+              <li><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#gems"></use></svg><h4>Gems</h4></li>
+              <li><svg width="32px" height="32px" viewbox="0 0 48 48"><use href="#pearls"></use></svg><h4>Pearls</h4></li>
         </div>
+      </div>
+      <img src="images/compass.svg" id="compass" />
+      <img src="images/sea_monster_1.svg" id="sea_monster_1" />
+      <img src="images/sea_monster_2.svg" id="sea_monster_2" />
+      <img src="images/galleon.svg" id="galleon" />
+    </div>
+
+    <div id="noble_houses">
+      <h2>Noble Houses of the<br/>Emerald Kingdoms</h2>
+      <div class="controls">
+        <span>Sort: </span>
+        <a id="sort_alpha_asc" class="sort_button selected" style="display: none;"><i class="fas fa-sort-alpha-down"></i></a>
+        <a id="sort_alpha_desc" class="sort_button selected"><i class="fa fa-sort-alpha-up"></i></a>
+        <a id="sort_rank" class="sort_button"><i class="fas fa-sitemap"></i></a>
+        <a id="sort_player" class="sort_button"><i class="fas fa-user"></i></a>
+        <a id="sort_race" class="sort_button"><i class="fas fa-flag"></i></a>
+        <!-- <a id="sort_kingdom" class="sort_button"><i class='fas fa-crown'></i></a> -->
+      </div>
+      <div class="list">
       </div>
     </div>
   </body>
