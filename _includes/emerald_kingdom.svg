@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" viewBox="0 0 2131 3284" preserveAspectRatio="xMidYMid meet" id="map_root" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Cinzel&amp;display=swap");
+
+    text {
+      font-family: 'Cinzel', serif;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    /* basic map colors */
+    .mountains {
+      fill:darkgrey;
+      stroke:darkgrey;
+    }
+
+    .sea {
+      fill:steelblue;
+      stroke:steelblue;
+    }
+
+    .river {   
+      fill:lightseagreen;
+      stroke:lightseagreen
+    }
+
+    .land {fill:darkkhaki}
+  </style>
   <defs id="symbols">
     <symbol id="bridge" width="48" height="48" viewBox="0 0 512 512">
       <title>Bridge</title>
