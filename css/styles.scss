@@ -391,58 +391,7 @@ div.highlight {background-color: rgba(0, 0, 0, 0.25);}
 }
 
 
-/* race colors */
-.header.lagante {
-  background-image: url("../images/lagante.svg");
-}
-
-.lagante {
-  /* background-color: rgba(34, 139, 34, 0.75); /* Forest Green */
-  .land{
-    fill: forestgreen;
-    stroke-width: 0px;}
-  use{color: gold}
-}
-
-
-.header.lucian {
-  background-image: url("../images/lucian.svg");
-}
-
-.lucian {
-  /* background-color: rgba(255, 215, 0, 0.75); gold */
-  .land{
-    fill: gold;
-    stroke-width: 0px;}
-  use{color: indigo}
-}
-
-.header.magnol {
-  background-image: url("../images/magnol.svg");
-}
-
-.magnol {
-  /* background-color: rgba(255, 0, 0, 0.75); /* red */
-  .land{
-    fill:red;
-    stroke-width: 0px;}
-  use{color: white}
-}
-
-.header.rio {
-  background-image: url("../images/rio.svg");
-}
-
-.rio {
-  /* background-color: rgba(65, 105, 225, 0.75); /* royalblue */
-  .land{
-    fill: royalblue;
-    stroke-width: 0px;}
-  use{color: red}
-}
-
-
-/* rank colors */
+/* Header background settings */
 .header {
   height: 5em;
   background-size: 5em 5em;
@@ -451,61 +400,83 @@ div.highlight {background-color: rgba(0, 0, 0, 0.25);}
   h2 {margin-top: 1.5em;}
 }
 
-.header.royal {
-  background-image: url("../images/royal.svg");
+/* race colors */
+.header.lagante {background-image: url("../images/lagante.svg");}
+.header.lucian {background-image: url("../images/lucian.svg");}
+.header.magnol {background-image: url("../images/magnol.svg");}
+.header.rio {background-image: url("../images/rio.svg");}
+
+#map_root.race {
+  .lagante {
+    .land{
+      fill: forestgreen;
+      stroke-width: 0px;}
+    use{color: gold}
+  }
+
+  .lucian {
+    .land{
+      fill: gold;
+      stroke-width: 0px;}
+    use{color: indigo}
+  }
+
+  .magnol {
+    .land{
+      fill:red;
+      stroke-width: 0px;}
+    use{color: white}
+  }
+
+  .rio {
+    .land{
+      fill: royalblue;
+      stroke-width: 0px;}
+    use{color: red}
+  }
 }
 
-.royal {
-  .land{
-    fill: rgb(255, 176, 0);
-    stroke-width: 0px;}
-  use{color: black}
-}
-
-.header.principal {
-  background-image: url("../images/principal.svg");
-}
-
-.principal {
-  .land{
-    fill: rgb(254, 97, 0);
-    stroke-width: 0px;}
-  use{color: black}
-}
-
-.header.archducal {
-  background-image: url("../images/archducal.svg");
-}
-
-.archducal {
-  /* background-color: rgba(220, 38, 127, 0.75); */
-  .land{
-    fill: rgb(220, 38, 127);
-    stroke-width: 0px;}
-  use{color: black}
-}
-
-.header.ducal {
-  background-image: url("../images/ducal.svg");
-}
+/* rank colors */
+.header.royal {background-image: url("../images/royal.svg");}
+.header.principal {background-image: url("../images/principal.svg");}
+.header.archducal {background-image: url("../images/archducal.svg");}
+.header.ducal {background-image: url("../images/ducal.svg");}
+.header.comital {background-image: url("../images/comital.svg");}
 
 
-.ducal {
-  /* background-color: rgba(120, 94, 240, 0.75); */
-  .land{
-    fill: rgb(120, 94, 240);
-    stroke-width: 0px;}
-  use{color: black}
-}
+#map_root.rank {
+  .royal {
+    .land{
+      fill: rgb(255, 176, 0);
+      stroke-width: 0px;}
+    use{color: black}
+  }
 
-.header.comital {
-  background-image: url("../images/comital.svg");
-}
+  .principal {
+    .land{
+      fill: rgb(254, 97, 0);
+      stroke-width: 0px;}
+    use{color: black}
+  }
 
-.comital {
-  /* background-color: rgba(100, 143, 255, 0.75); */
-  .land{
-    fill: rgb(100, 143, 255);
-    stroke-width: 0px;}
-  use{color: black}
+  .archducal {
+    .land{
+      fill: rgb(220, 38, 127);
+      stroke-width: 0px;}
+    use{color: black}
+  }
+
+  .ducal {
+    .land{
+      fill: rgb(120, 94, 240);
+      stroke-width: 0px;}
+    use{color: black}
+  }
+
+  .comital {
+    .land{
+      fill: rgb(100, 143, 255);
+      stroke-width: 0px;}
+    use{color: black}
+  }
 }

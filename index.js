@@ -35,6 +35,8 @@ function redrawHouseBorders() {
             var land = $("#" + territory);
             land.removeClass(); //remove all existing decorations
             land.addClass(house.name.toLowerCase());
+            land.addClass(house.race.toLowerCase());
+            land.addClass(house.rank.toLowerCase());
             land.addClass("owned");
             if(land.length == 0) console.log("error: missing DOM element assgning territory" + territory +" to house: " + house.name)
         });
@@ -115,61 +117,84 @@ function redrawHouseList() {
     if(loglevel > 0) console.log("done redrawing house list.");
 }
 
+const sort_modes = {
+    'alpha_asc': {key: "name"},
+    'alpha_desc': {
+        key: "name",
+        direction: -1
+    },
+    'rank':  {
+        key: "rank_order",
+        label: "rank"
+    },
+    'race': {
+        key: "race",
+        label: "race"
+    },
+    'player': {key: "player"},
+    'kingdom': {
+        key: "kingdom",
+        label: "kingdom"
+    }
+}
 
-//sort house list
-function sortHouseList(attr = "name", header_attr = "null", order = 1) {
-    if(loglevel > 0) console.log("sorting house list by " + attr + "... ");
+function sortHouses(mode_name = "alpha_asc") {
+    var mode = sort_modes[mode_name];
+    if (mode == undefined) {
+        console.log("Error: invalid sort key: " + mode_name);
+        return;
+    }
+
+    //set the GET request for page refreshes as needed
+    live_params.set("sort", mode_name);
+
+    //highlight the correct button
+    $(".sort_button").removeClass("selected");
+    $("#sort_" + mode_name).addClass("selected");
+
+    //sort house list
+    //function sortHouseList(attr = "name", header_attr = "null", order = 1) {
+    if(loglevel > 0) console.log("sorting house list by " + mode.key + "... ");
+    
     //sort the list
+    var direction = mode.direction | 1;
     houses.sort(function(a, b) {
         //filter dirty data to the bottom of the list
-        if(a[attr] == undefined) return order;
-        if(b[attr] == undefined) return 0-order;
+        if(a[mode.key] == undefined) return direction;
+        if(b[mode.key] == undefined) return 0-direction;
 
         //compare valid attributes
-        if (b[attr] < a[attr]) {
-            return order
-        } else if (b[attr] == a[attr]) { //use name as a tiebreaker
+        if (b[mode.key] < a[mode.key]) {
+            return direction
+        } else if (b[mode.key] == a[mode.key]) { //use name as a tiebreaker
             return (b.name) < (a.name) ? 1 : -1;
         } else {
-         return 0-order;
+         return 0-direction;
         }
     });
 
     //clear the headers
     house_list.children(".header").remove();
 
+    //sort and redraw headers
     var last_group = "null";
     houses.forEach(function(house, index){
-        if (!house.active || house[attr] == undefined) return;
-        if (header_attr != "null" && house[header_attr] != last_group) {
-            last_group = house[header_attr];
-            var content = '<div class="header ' + house[header_attr].toLowerCase() + '"><h2>' + house[header_attr] + '</h2></div>';
+        if (!house.active || house[mode.key] == undefined) return;
+        if (mode.label && house[mode.label] != last_group) {
+            last_group = house[mode.label];
+            var content = '<div class="header ' + house[mode.label].toLowerCase() + '"><h2>' + house[mode.label] + '</h2></div>';
             house_list.append(content);
         }
-        if(loglevel > 1) console.log(house.name + ": " + house[attr] + " =>" + house[header_attr]);
+        if(loglevel > 1) console.log(house.name + ": " + house[mode.key] + " =>" + house[mode.label]);
         house_list.children("#" + house.name.toLowerCase()).appendTo(house_list);
     });
     if(loglevel > 0) console.log("done sorting house list.");
-}
 
-//set highlight mode
-function setHighlightMode(attr = "name") {
-    if(loglevel > 0) console.log("setting highlight mode to: " + attr + "... ");
-
-    //create a new static variable, so we can clear old highlights
-    if( typeof setHighlightMode.prev_attr == 'undefined' )  setHighlightMode.prev_attr = "name";
-
-    houses.forEach(function(house, index){
-        if (!house.active || house[attr] == undefined || house[setHighlightMode.prev_attr] == undefined) return;
-
-        //clear existing highlights.
-        var lands = $("." + house.name.toLowerCase());
-        if(setHighlightMode.prev_attr != "name") lands.removeClass(house[setHighlightMode.prev_attr].toLowerCase());
-        lands.addClass(house[attr].toLowerCase());
-    });
-
-    setHighlightMode.prev_attr = attr;
-
+    //set highlight mode
+    //function setHighlightMode(attr = "name") {
+    if(loglevel > 0) console.log("setting highlight mode to: " + mode.key + "... ");
+    map_root.removeClass(Object.keys(sort_modes).join(" "));
+    map_root.addClass(mode_name);
     if(loglevel > 0) console.log("done setting highlight mode.");
 }
 
@@ -195,19 +220,11 @@ $(document).ready(function() {
         },
 
         get: function (key) {return this.params.get(key);},
-
-        autosort: function () {
-            var sort_default = $("#sort_" + this.params.get('sort'));
-            if (sort_default.length != 0) sort_default[0].click();
-        }
     };
 
 
     $.getJSON('houses.json', function(data) {
         houses = data;
-        
-        // TODO: dynamically populate the house list
-
         //color the house territories
         redrawHouseBorders();
 
@@ -218,60 +235,27 @@ $(document).ready(function() {
         redrawHouseList();
 
         //sort the house list based on input Get requests.
-        live_params.autosort();
+        sortHouses(live_params.get('sort'));
     });
+
+
+
 
     //set up sorting functions
     $("#sort_alpha_asc").click(function () {
-        live_params.set("sort", "alpha_asc");
-        sortHouseList();
-        setHighlightMode(undefined);
+        sortHouses("alpha_asc");
         $("#sort_alpha_asc").hide()
         $("#sort_alpha_desc").show()
-        $(".sort_button").removeClass("selected");
-        $("#sort_alpha_desc").addClass("selected");
     });
 
     $("#sort_alpha_desc").click(function () {
-        live_params.set("sort", "alpha_desc");
-        sortHouseList(undefined, undefined, -1);
-        setHighlightMode(undefined);
+        sortHouses("alpha_desc");
         $("#sort_alpha_desc").hide()
         $("#sort_alpha_asc").show()
-        $(".sort_button").removeClass("selected");
-        $("#sort_alpha_asc").addClass("selected");
     });
 
-    
-    $("#sort_rank").click(function () {
-        live_params.set("sort", "rank");
-        sortHouseList("rank_order", "rank", 1);
-        setHighlightMode("rank");
-        $(".sort_button").removeClass("selected");
-        $("#sort_rank").addClass("selected");
-    });
-
-    $("#sort_race").click(function () {
-        live_params.set("sort", "race");
-        sortHouseList("race", "race", 1);
-        setHighlightMode("race");
-        $(".sort_button").removeClass("selected");
-        $("#sort_race").addClass("selected");
-    });
-
-    $("#sort_player").click(function () {
-        live_params.set("sort", "player");
-        sortHouseList("player", undefined, 1);
-        setHighlightMode(undefined);
-        $(".sort_button").removeClass("selected");
-        $("#sort_player").addClass("selected");
-    });
-
-    $("#sort_kingdom").click(function () {
-        live_params.set("sort", "kingdom");
-        sortHouseList("kingdom", "kingdom", 1);
-        setHighlightMode("kingdom");
-        $(".sort_button").removeClass("selected");
-        $("#sort_kingdom").addClass("selected");
-    });
+    $("#sort_rank").click(function () {sortHouses("rank");});
+    $("#sort_race").click(function () {sortHouses("race");});
+    $("#sort_player").click(function () {sortHouses("player");});
+    $("#sort_kingdom").click(function () {sortHouses("kingdom");});
 });
