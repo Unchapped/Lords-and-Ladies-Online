@@ -14,6 +14,7 @@ var houses;
 /* basic rapper around the GET parameters of the window, so we can modify them live. Definition is in document.ready below */
 var live_params;
 
+/* ==== Helper Functions ==== */
 /* useful for adding centered content to an SVG group */
 function addSvgCenteredObject(container, element) {
         var containerBox = container.getBBox();
@@ -23,7 +24,12 @@ function addSvgCenteredObject(container, element) {
         element.setAttribute("y", containerBox.y + (containerBox.height / 2) - (renderedBox.height / 2));
 }
 
-//recolors all the house territories
+//Sanitize any arbitrary string to use it as a class/id name for a DOM object
+function sanitizeClassName(val) {return val.toLowerCase().replace(/the |[.*'&+\-?^${}()|[\]\\]/g, '').replace(/ /g,"_");}
+
+/* ==== Map initialization Functions ==== */ 
+
+//dynamically applies rendering classes to all the owned house territories
 function redrawHouseBorders() {
     if(loglevel > 0) console.log("redrawing house borders");
 
@@ -34,16 +40,14 @@ function redrawHouseBorders() {
         house.territories.forEach(function(territory, index){
             var land = $("#" + territory);
             land.removeClass(); //remove all existing decorations
-            land.addClass(house.name.toLowerCase());
-            land.addClass(house.race.toLowerCase());
-            land.addClass(house.rank.toLowerCase());
-            land.addClass("owned");
+            land.addClass(sanitizeClassName(house.name) + ' ' + sanitizeClassName(house.race) + ' ' + sanitizeClassName(house.rank) + ' ' + sanitizeClassName(house.kingdom) + ' owned');
             if(land.length == 0) console.log("error: missing DOM element assgning territory" + territory +" to house: " + house.name)
         });
     });
     if(loglevel > 0) console.log("done redrawing house borders.");
 }
 
+//Draws house seats/heraldry on the map
 function redrawHouseSeats() {
     if(loglevel > 0) console.log("redrawing house seats... ");
     
@@ -89,7 +93,7 @@ function redrawHouseList() {
         if(loglevel > 1) console.log("info: redrawing " + house.name);
 
         //Create DOM object
-        var content = '<div id="' + house.name.toLowerCase() + '" class="house ' + house.name.toLowerCase() + '">'
+        var content = '<div id="' + sanitizeClassName(house.name) + '" class="house ' + sanitizeClassName(house.name) + '">'
         content += '<span class="heraldry"><img src = "images/houses/' + house.name + '.png" /></span>';
         content += '<h3>' + house.name + '</h3>';
         content += '<h4>"' +house.motto +'"</h4>';
@@ -107,11 +111,11 @@ function redrawHouseList() {
 
     //add mouse handlers here.
     house_list.children("div").mouseover(function(e){
-        $("." + $(this).attr('id').toLowerCase()).addClass("highlight");
+        $("." + $(this).attr('id')).addClass("highlight");
     });
 
     house_list.children("div").mouseout(function(e){
-        $("." + $(this).attr('id').toLowerCase()).removeClass("highlight");
+        $("." + $(this).attr('id')).removeClass("highlight");
     });
 
     if(loglevel > 0) console.log("done redrawing house list.");
@@ -182,11 +186,11 @@ function sortHouses(mode_name = "alpha_asc") {
         if (!house.active || house[mode.key] == undefined) return;
         if (mode.label && house[mode.label] != last_group) {
             last_group = house[mode.label];
-            var content = '<div class="header ' + house[mode.label].toLowerCase() + '"><h2>' + house[mode.label] + '</h2></div>';
+            var content = '<div class="header ' + sanitizeClassName(house[mode.label]) + '"><h2>' + house[mode.label] + '</h2></div>';
             house_list.append(content);
         }
         if(loglevel > 1) console.log(house.name + ": " + house[mode.key] + " =>" + house[mode.label]);
-        house_list.children("#" + house.name.toLowerCase()).appendTo(house_list);
+        house_list.children("#" + sanitizeClassName(house.name)).appendTo(house_list);
     });
     if(loglevel > 0) console.log("done sorting house list.");
 

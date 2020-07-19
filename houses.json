@@ -17,12 +17,12 @@
 			"central_beacon_hills",
 			"georgetown"
 		],
-		"kingdom":"",
+		"kingdom":"The Laurel And Emeralds",
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
 	},
-	{"name":"Andover", "player":"NPC", "race":"Rio", "gold":0, "motto":"Judge not lest ye be judged", "seat":"null", "territories":[], "kingdom":"", "active":false},
+	{"name":"Andover", "player":"NPC", "race":"Rio", "gold":0, "motto":"Judge not lest ye be judged", "seat":"null", "territories":[], "kingdom":"Unaligned Houses", "active":false},
 	{
 		"name":"Ascella",
 		"player":"Ashley Reynolds",
@@ -41,7 +41,7 @@
 			"citadel_of_the_lake",
 			"the_riviera"
 		],
-		"kingdom":"",
+		"kingdom":"The Northern Lagant",
 		"rank":"Ducal",
 		"rank_order": 3,
 		"active":true
@@ -55,7 +55,7 @@
 		"seat":"ashton_hall",
 		"seat_location":{"x":550,"y":1290},
 		"territories":["ashton_hall"],
-		"kingdom":"",
+		"kingdom":"Unaligned Houses",
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -77,7 +77,7 @@
 			"leary",
 			"fremont"
 		],
-		"kingdom":"",
+		"kingdom":"Old Magnolia",
 		"rank":"Ducal",
 		"rank_order": 3,
 		"active":true
@@ -102,7 +102,7 @@
 			"angle_lake"
 
 		],
-		"kingdom":"",
+		"kingdom":"The Laurel And Emeralds",
 		"rank":"Archducal",
 		"rank_order": 2,
 		"active":true
@@ -115,12 +115,12 @@
 		"motto":"Hew to the True", 
 		"seat":"the_bluffs",
 		"territories":["the_bluffs"],
-		"kingdom":"",
+		"kingdom":"Unaligned Houses",
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
 	},
-	{"name":"Bitter", "player":"NPC", "race":"Magnol", "gold":0, "motto":"The Proud Die the Same", "seat":"null", "territories":[], "kingdom":"", "active":false},
+	{"name":"Bitter", "player":"NPC", "race":"Magnol", "gold":0, "motto":"The Proud Die the Same", "seat":"null", "territories":[], "kingdom":"Unaligned Houses", "active":false},
 	{
 		"name":"Boeing",
 		"player":"NPC",
@@ -134,7 +134,7 @@
 			"liberty_park",
 			"the_eastern_highlands"
 		],
-		"kingdom":"",
+		"kingdom":"Unaligned Houses",
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -148,7 +148,7 @@
 		"seat":"lake_meridian", 
 		"seat_location":{"x":760,"y":480},
 		"territories":["lake_meridian"], 
-		"kingdom":"", 
+		"kingdom":"Unaligned Houses", 
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -171,7 +171,7 @@
 			"castle_stroud",
 			"phinney"
 		],
-		"kingdom":"",
+		"kingdom":"The Northern Lagant",
 		"rank":"Archducal",
 		"rank_order": 2,
 		"active":true
@@ -185,12 +185,12 @@
 		"seat":"west_point",
 		"seat_location":{"x":110,"y":1195},
 		"territories":["west_point"],
-		"kingdom":"",
+		"kingdom":"Unaligned Houses",
 		"rank":"Ducal",
 		"rank_order": 3,
 		"active":true
 	},
-	{"name":"Channon", "player":"NPC", "race":"Lagante", "gold":0, "motto":"Standing Strong", "seat":"null", "territories":[], "kingdom":"", "active":false},
+	{"name":"Channon", "player":"NPC", "race":"Lagante", "gold":0, "motto":"Standing Strong", "seat":"null", "territories":[], "kingdom":"Unaligned Houses", "active":false},
 	{
 		"name":"Corvus",
 		"player":"Charles Cadwallader",
@@ -208,7 +208,7 @@
 			"fauntleroy",
 			"endolyne"
 		],
-		"kingdom":"",
+		"kingdom":"Old Magnolia",
 		"rank":"Principal",
 		"rank_order": 1,
 		"active":true
@@ -224,7 +224,7 @@
 			"twixtbay",
 			"kinnear"
 		],
-		"kingdom":"",
+		"kingdom":"Unaligned Houses",
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -240,7 +240,7 @@
 			"hamilton",
 			"fairmount"
 		],
-		"kingdom":"",
+		"kingdom":"Unaligned Houses",
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -256,7 +256,7 @@
 			"cedar_grove",
 			"fairwood"
 		],
-		"kingdom":"",
+		"kingdom":"Unaligned Houses",
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -279,7 +279,7 @@
 			"orillia",
 			"emerald_downs"
 		],
-		"kingdom":"",
+		"kingdom":"Aerunost",
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -292,7 +292,7 @@
 		"motto":"Ever Vigilant",
 		"seat":"columbia",
 		"territories":["columbia"],
-		"kingdom":"",
+		"kingdom":"Unaligned Houses",
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -308,7 +308,7 @@
 			"highline",
 			"evansville"
 		],
-		"kingdom":"",
+		"kingdom":"Unaligned Houses",
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -327,7 +327,7 @@
 			"duwamish_flats",
 			"fosters_field"
 		],
-		"kingdom":"",
+		"kingdom":"The Laurel And Emeralds",
 		"rank":"Principal",
 		"rank_order": 1,
 		"active":true
@@ -344,7 +344,7 @@
 			"the_wedgewood",
 			"chelsea"
 		], 
-		"kingdom":"",
+		"kingdom":"Unaligned Houses",
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -361,7 +361,7 @@
 			"leschi",
 			"madrona"
 		],
-		"kingdom":"",
+		"kingdom":"Unaligned Houses",
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -378,7 +378,7 @@
 			"kent",
 			"meridian"
 		], 
-		"kingdom":"",
+		"kingdom":"Unaligned Houses",
 		"rank":"Comital",
 		"rank_order": 4, 
 		"active":true
@@ -392,12 +392,12 @@
 		"seat":"pigeon_point",
 		"seat_location":{"x":625,"y":2060},
 		"territories":["pigeon_point"],
-		"kingdom":"",
+		"kingdom":"Unaligned Houses",
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
 	},
-	{"name":"Klickitat", "player":"NPC", "race":"Rio", "gold":0, "motto":"From our Ships come all that is Good", "seat":"null", "territories":[], "kingdom":"", "active":false},
+	{"name":"Klickitat", "player":"NPC", "race":"Rio", "gold":0, "motto":"From our Ships come all that is Good", "seat":"null", "territories":[], "kingdom":"Unaligned Houses", "active":false},
 	{
 		"name":"Langston",
 		"player":"NPC",
@@ -409,7 +409,7 @@
 			"skyway",
 			"allentown"
 		],
-		"kingdom":"",
+		"kingdom":"Unaligned Houses",
 		"rank":"Comital",
 		"rank_order": 4,
 	"active":false
@@ -426,7 +426,7 @@
 			"fort_lawton",
 			"the_armoury"
 		],
-		"kingdom":"",
+		"kingdom":"Unaligned Houses",
 		"rank":"Comital",
 		"rank_order": 4,
 	"active":true
@@ -443,7 +443,7 @@
 			"grandview",
 			"tukwila_heights"
 		],
-		"kingdom":"",
+		"kingdom":"Unaligned Houses",
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -464,7 +464,7 @@
 			"laurelhurst",
 			"the_proving_grounds"
 		],
-		"kingdom":"",
+		"kingdom":"Unaligned Houses",
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -478,7 +478,7 @@
 		"seat":"stevens",
 		"seat_location":{"x":985,"y":1430},
 		"territories":["stevens"],
-		"kingdom":"",
+		"kingdom":"Unaligned Houses",
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -495,7 +495,7 @@
 			"glendale",
 			"roseburg"
 		],
-		"kingdom":"",
+		"kingdom":"Unaligned Houses",
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -518,7 +518,7 @@
 			"point_wells",
 			"briarcrest"
 		],
-		"kingdom":"",
+		"kingdom":"The Northern Lagant",
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -540,7 +540,7 @@
 			"kubota_gardens"
 			
 		],
-		"kingdom":"",
+		"kingdom":"The Laurel And Emeralds",
 		"rank":"Ducal",
 		"rank_order": 3,
 		"active":true
@@ -553,12 +553,12 @@
 		"motto":"As the Gods will, so be it",
 		"seat":"the_queens_land",
 		"territories":["the_queens_land"],
-		"kingdom":"",
+		"kingdom":"The Laurel And Emeralds",
 		"rank":"Royal",
 		"rank_order": 0,
 		"active":true
 	},
-	{"name":"Sheridan", "player":"NPC", "race":"Lagante", "gold":0, "motto":"Catch us if you can", "seat":"null", "territories":[], "kingdom":"", "active":false},
+	{"name":"Sheridan", "player":"NPC", "race":"Lagante", "gold":0, "motto":"Catch us if you can", "seat":"null", "territories":[], "kingdom":"Unaligned Houses", "active":false},
 	{
 		"name":"Silverthorn",
 		"player":"Nate Chapman",
@@ -575,7 +575,7 @@
 			"rainier_valley_north",
 			"rainier_valley_south"
 		], 
-		"kingdom":"",
+		"kingdom":"The Silver Shore",
 		"rank":"Ducal",
 		"rank_order": 3,
 		"active":true
@@ -594,7 +594,7 @@
 			"wallingford",
 			"the_university"
 		],
-		"kingdom":"",
+		"kingdom":"The Northern Light",
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -619,7 +619,7 @@
 			"renton",
 			"benson"
 		],
-		"kingdom":"",
+		"kingdom":"The Laurel And Emeralds",
 		"rank":"Ducal",
 		"rank_order": 3,
 		"active":true
@@ -640,7 +640,7 @@
 			"the_denny_hills",
 			"mayfair"
 		],
-		"kingdom":"",
+		"kingdom":"The Silver Shore",
 		"rank":"Principal",
 		"rank_order": 1,
 		"active":true

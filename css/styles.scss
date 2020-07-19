@@ -401,10 +401,10 @@ div.highlight {background-color: rgba(0, 0, 0, 0.25);}
 }
 
 /* race colors */
-.header.lagante {background-image: url("../images/lagante.svg");}
-.header.lucian {background-image: url("../images/lucian.svg");}
-.header.magnol {background-image: url("../images/magnol.svg");}
-.header.rio {background-image: url("../images/rio.svg");}
+.header.lagante {background-image: url("../images/races/lagante.svg");}
+.header.lucian {background-image: url("../images/races/lucian.svg");}
+.header.magnol {background-image: url("../images/races/magnol.svg");}
+.header.rio {background-image: url("../images/races/rio.svg");}
 
 #map_root.race {
   .lagante {
@@ -437,11 +437,11 @@ div.highlight {background-color: rgba(0, 0, 0, 0.25);}
 }
 
 /* rank colors */
-.header.royal {background-image: url("../images/royal.svg");}
-.header.principal {background-image: url("../images/principal.svg");}
-.header.archducal {background-image: url("../images/archducal.svg");}
-.header.ducal {background-image: url("../images/ducal.svg");}
-.header.comital {background-image: url("../images/comital.svg");}
+.header.royal {background-image: url("../images/ranks/royal.svg");}
+.header.principal {background-image: url("../images/ranks/principal.svg");}
+.header.archducal {background-image: url("../images/ranks/archducal.svg");}
+.header.ducal {background-image: url("../images/ranks/ducal.svg");}
+.header.comital {background-image: url("../images/ranks/comital.svg");}
 
 
 #map_root.rank {
@@ -478,5 +478,50 @@ div.highlight {background-color: rgba(0, 0, 0, 0.25);}
       fill: rgb(100, 143, 255);
       stroke-width: 0px;}
     use{color: black}
+  }
+}
+
+/* kingdom colors */
+.header.aerunost {background-image: url("../images/kingdoms/aerunost.svg");}
+.header.old_magnolia {background-image: url("../images/kingdoms/old_magnolia.svg");}
+.header.laurel_and_emeralds {background-image: url("../images/kingdoms/laurel_and_emeralds.svg");}
+.header.northern_lagant {background-image: url("../images/kingdoms/northern_lagant.svg");}
+.header.northern_light {background-image: url("../images/kingdoms/northern_light.svg");}
+.header.silver_shore {background-image: url("../images/kingdoms/silver_shore.svg");}
+.header.unaligned_houses {background-image: url("../images/kingdoms/unaligned_houses.svg");}
+
+#map_root.kingdom {
+  .aerunost {
+    .land{fill: forestgreen; stroke: black;}
+    use{color: gold;}
+  }
+
+  .old_magnolia {
+    .land{ fill: white; stroke: black;}
+    use{color: black;}
+  }
+
+  .laurel_and_emeralds {
+    .land{fill: gold; stroke: indigo;}
+    use{color: rgb(4, 99, 7);}
+  }
+
+  .northern_lagant {
+    .land{ fill: forestgreen; stroke: black;}
+    use{color: gold;}
+  }
+
+  .northern_light {
+    .land{ fill: purple; stroke: white;}
+    use{color: forestgreen;}
+  }
+
+  .silver_shore {
+    .land{fill:white; stroke: royalblue;}
+    use{color: gold}
+  }
+  .unaligned_houses {
+    .land{fill:lightgrey; stroke: darkgrey;}
+    use{color: forestgreen}
   }
 }
