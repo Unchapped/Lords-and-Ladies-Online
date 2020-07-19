@@ -9,7 +9,7 @@ var loglevel = 1; //0 = errors only, higher numbers mean more detail
 var map_root;
 var house_list;
 /* downloaded house data from the server and populate the map */
-var houses;
+//var houses; //now defined in houses.json and included in the HTML head 
 
 /* basic rapper around the GET parameters of the window, so we can modify them live. Definition is in document.ready below */
 var live_params;
@@ -218,6 +218,7 @@ $(document).ready(function() {
         return;
     }
 
+    //initialize our "live params" helper, which auto-adds new get items to the browser history for searches and such.
     live_params = {
         params: new URLSearchParams(window.location.search),
         set: function (key, value) {
@@ -228,21 +229,17 @@ $(document).ready(function() {
         get: function (key) {return this.params.get(key);},
     };
 
+    //color the house territories
+    redrawHouseBorders();
 
-    $.getJSON('houses.json', function(data) {
-        houses = data;
-        //color the house territories
-        redrawHouseBorders();
+    //redraw the house seats
+    redrawHouseSeats();
+    
+    //(re)draw house list
+    redrawHouseList();
 
-        //redraw the house seats
-        redrawHouseSeats();
-        
-        //(re)draw house list
-        redrawHouseList();
-
-        //sort the house list based on input Get requests.
-        sortHouses(live_params.get('sort'));
-    });
+    //sort the house list based on input Get requests.
+    sortHouses(live_params.get('sort'));
 
 
 
