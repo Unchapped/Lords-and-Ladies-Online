@@ -18,6 +18,7 @@
 			"georgetown"
 		],
 		"kingdom":"The Laurel And Emeralds",
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -42,6 +43,7 @@
 			"the_riviera"
 		],
 		"kingdom":"The Northern Lagant",
+		"kingdom_order": 0,
 		"rank":"Ducal",
 		"rank_order": 3,
 		"active":true
@@ -56,6 +58,7 @@
 		"seat_location":{"x":550,"y":1290},
 		"territories":["ashton_hall"],
 		"kingdom":"Unaligned Houses",
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -78,6 +81,7 @@
 			"fremont"
 		],
 		"kingdom":"Old Magnolia",
+		"kingdom_order": 3,
 		"rank":"Ducal",
 		"rank_order": 3,
 		"active":true
@@ -103,6 +107,7 @@
 
 		],
 		"kingdom":"The Laurel And Emeralds",
+		"kingdom_order": 2,
 		"rank":"Archducal",
 		"rank_order": 2,
 		"active":true
@@ -116,6 +121,7 @@
 		"seat":"the_bluffs",
 		"territories":["the_bluffs"],
 		"kingdom":"Unaligned Houses",
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -135,6 +141,7 @@
 			"the_eastern_highlands"
 		],
 		"kingdom":"Unaligned Houses",
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -149,6 +156,7 @@
 		"seat_location":{"x":760,"y":480},
 		"territories":["lake_meridian"], 
 		"kingdom":"Unaligned Houses", 
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -172,6 +180,7 @@
 			"phinney"
 		],
 		"kingdom":"The Northern Lagant",
+		"kingdom_order": 2,
 		"rank":"Archducal",
 		"rank_order": 2,
 		"active":true
@@ -186,6 +195,7 @@
 		"seat_location":{"x":110,"y":1195},
 		"territories":["west_point"],
 		"kingdom":"Unaligned Houses",
+		"kingdom_order": 3,
 		"rank":"Ducal",
 		"rank_order": 3,
 		"active":true
@@ -209,6 +219,7 @@
 			"endolyne"
 		],
 		"kingdom":"Old Magnolia",
+		"kingdom_order": 0,
 		"rank":"Principal",
 		"rank_order": 1,
 		"active":true
@@ -225,6 +236,7 @@
 			"kinnear"
 		],
 		"kingdom":"Unaligned Houses",
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -241,6 +253,7 @@
 			"fairmount"
 		],
 		"kingdom":"Unaligned Houses",
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -257,6 +270,7 @@
 			"fairwood"
 		],
 		"kingdom":"Unaligned Houses",
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -280,6 +294,7 @@
 			"emerald_downs"
 		],
 		"kingdom":"Aerunost",
+		"kingdom_order": 0,
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -293,6 +308,7 @@
 		"seat":"columbia",
 		"territories":["columbia"],
 		"kingdom":"Unaligned Houses",
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -309,6 +325,7 @@
 			"evansville"
 		],
 		"kingdom":"Unaligned Houses",
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -328,6 +345,7 @@
 			"fosters_field"
 		],
 		"kingdom":"The Laurel And Emeralds",
+		"kingdom_order": 1,
 		"rank":"Principal",
 		"rank_order": 1,
 		"active":true
@@ -345,6 +363,7 @@
 			"chelsea"
 		], 
 		"kingdom":"Unaligned Houses",
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -362,6 +381,7 @@
 			"madrona"
 		],
 		"kingdom":"Unaligned Houses",
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -379,6 +399,7 @@
 			"meridian"
 		], 
 		"kingdom":"Unaligned Houses",
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4, 
 		"active":true
@@ -393,6 +414,7 @@
 		"seat_location":{"x":625,"y":2060},
 		"territories":["pigeon_point"],
 		"kingdom":"Unaligned Houses",
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -410,6 +432,7 @@
 			"allentown"
 		],
 		"kingdom":"Unaligned Houses",
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4,
 	"active":false
@@ -427,6 +450,7 @@
 			"the_armoury"
 		],
 		"kingdom":"Unaligned Houses",
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4,
 	"active":true
@@ -444,6 +468,7 @@
 			"tukwila_heights"
 		],
 		"kingdom":"Unaligned Houses",
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -465,6 +490,7 @@
 			"the_proving_grounds"
 		],
 		"kingdom":"Unaligned Houses",
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -479,6 +505,7 @@
 		"seat_location":{"x":985,"y":1430},
 		"territories":["stevens"],
 		"kingdom":"Unaligned Houses",
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -496,6 +523,7 @@
 			"roseburg"
 		],
 		"kingdom":"Unaligned Houses",
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -519,6 +547,7 @@
 			"briarcrest"
 		],
 		"kingdom":"The Northern Lagant",
+		"kingdom_order": 4,
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -541,6 +570,7 @@
 			
 		],
 		"kingdom":"The Laurel And Emeralds",
+		"kingdom_order": 3,
 		"rank":"Ducal",
 		"rank_order": 3,
 		"active":true
@@ -554,6 +584,7 @@
 		"seat":"the_queens_land",
 		"territories":["the_queens_land"],
 		"kingdom":"The Laurel And Emeralds",
+		"kingdom_order": 0,
 		"rank":"Royal",
 		"rank_order": 0,
 		"active":true
@@ -576,6 +607,7 @@
 			"rainier_valley_south"
 		], 
 		"kingdom":"The Silver Shore",
+		"kingdom_order": 3,
 		"rank":"Ducal",
 		"rank_order": 3,
 		"active":true
@@ -595,6 +627,7 @@
 			"the_university"
 		],
 		"kingdom":"The Northern Light",
+		"kingdom_order": 0,
 		"rank":"Comital",
 		"rank_order": 4,
 		"active":true
@@ -620,6 +653,7 @@
 			"benson"
 		],
 		"kingdom":"The Laurel And Emeralds",
+		"kingdom_order": 3,
 		"rank":"Ducal",
 		"rank_order": 3,
 		"active":true
@@ -641,6 +675,7 @@
 			"mayfair"
 		],
 		"kingdom":"The Silver Shore",
+		"kingdom_order": 0,
 		"rank":"Principal",
 		"rank_order": 1,
 		"active":true

@@ -138,7 +138,8 @@ const sort_modes = {
     'player': {key: "player"},
     'kingdom': {
         key: "kingdom",
-        label: "kingdom"
+        label: "kingdom",
+        tiebreaker: "kingdom_order"
     }
 }
 
@@ -161,7 +162,8 @@ function sortHouses(mode_name = "alpha_asc") {
     if(loglevel > 0) console.log("sorting house list by " + mode.key + "... ");
     
     //sort the list
-    var direction = mode.direction | 1;
+    var direction = mode.direction || 1;
+    var tiebreaker = mode.tiebreaker || 'name';
     houses.sort(function(a, b) {
         //filter dirty data to the bottom of the list
         if(a[mode.key] == undefined) return direction;
@@ -170,8 +172,8 @@ function sortHouses(mode_name = "alpha_asc") {
         //compare valid attributes
         if (b[mode.key] < a[mode.key]) {
             return direction
-        } else if (b[mode.key] == a[mode.key]) { //use name as a tiebreaker
-            return (b.name) < (a.name) ? 1 : -1;
+        } else if (b[mode.key] == a[mode.key]) {
+            return (b[tiebreaker]) < (a[tiebreaker]) ? 1 : -1;
         } else {
          return 0-direction;
         }
