@@ -27,6 +27,11 @@ function addSvgCenteredObject(container, element) {
 //Sanitize any arbitrary string to use it as a class/id name for a DOM object
 function sanitizeClassName(val) {return val.toLowerCase().replace(/the |[.*'&+\-?^${}()|[\]\\]/g, '').replace(/ /g,"_");}
 
+//Create a list of class names for all fancy attributes
+function generateAttrClassList(house) {
+    return sanitizeClassName(house.name) + ' ' + sanitizeClassName(house.race) + ' ' + sanitizeClassName(house.rank) + ' ' + sanitizeClassName(house.kingdom) + ((house.kingdom_order == 0) ? ' royal_house' : '');
+}
+
 /* ==== Map initialization Functions ==== */ 
 
 //dynamically applies rendering classes to all the owned house territories
@@ -40,7 +45,8 @@ function redrawHouseBorders() {
         house.territories.forEach(function(territory, index){
             var land = $("#" + territory);
             land.removeClass(); //remove all existing decorations
-            land.addClass(sanitizeClassName(house.name) + ' ' + sanitizeClassName(house.race) + ' ' + sanitizeClassName(house.rank) + ' ' + sanitizeClassName(house.kingdom) + ' owned');
+            // land.addClass(sanitizeClassName(house.name) + ' ' + sanitizeClassName(house.race) + ' ' + sanitizeClassName(house.rank) + ' ' + sanitizeClassName(house.kingdom) + ' owned');
+            land.addClass(generateAttrClassList(house) + ' owned');
             if(land.length == 0) console.log("error: missing DOM element assgning territory" + territory +" to house: " + house.name)
         });
     });
@@ -93,8 +99,12 @@ function redrawHouseList() {
         if(loglevel > 1) console.log("info: redrawing " + house.name);
 
         //Create DOM object
-        var content = '<div id="' + sanitizeClassName(house.name) + '" class="house ' + sanitizeClassName(house.name) + '">'
+        var content = '<div id="' + sanitizeClassName(house.name) + '" class="house ' + generateAttrClassList(house) + '">'
+        content += '<h3>' + house.name + '</h3>';
         content += '<span class="heraldry"><img src = "images/houses/' + house.name + '.png" /></span>';
+        content += '<h4>"' +house.motto +'"</h4>';
+
+        /* content += '<span class="heraldry"><img src = "images/houses/' + house.name + '.png" /></span>';
         content += '<h3>' + house.name + '</h3>';
         content += '<h4>"' +house.motto +'"</h4>';
         if (house.player != "NPC") {
@@ -103,7 +113,7 @@ function redrawHouseList() {
             content += '<span class="player"><i class="fas fa-robot"></i> NPC</span>';
         }
         content += '<span class="rank"><i class="fas fa-sitemap"></i> ' + house.rank + '</span>'
-        content += '<span class="race"><i class="fas fa-flag"></i> ' + house.race + '</span>'
+        content += '<span class="race"><i class="fas fa-flag"></i> ' + house.race + '</span>' */
         content += '</div>';
 
         house_list.append(content); // put it into the DOM    

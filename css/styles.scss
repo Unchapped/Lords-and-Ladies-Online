@@ -168,6 +168,8 @@ symbol#lumber path.dark {fill: darkgreen;}
     height: 70vw;
     overflow-x:hidden;
     overflow-y:auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
     div {
       padding: 5px;
       border-radius: 10px;
@@ -175,28 +177,60 @@ symbol#lumber path.dark {fill: darkgreen;}
   }
 }
 
+.header {
+  grid-column: 1 / span 2;
+}
+
 .house {
-  display: grid;
+  margin: 10px;
+  text-align: center;
+  /* display: grid;
   grid-template-columns: auto 28% 28% 28%;
   grid-template-rows: auto auto;
   grid-template-areas: 
     "logo name motto motto"
-    "logo player race rank";
+    "logo player race rank"; */
 
   .heraldry {
     text-align: center;
-    grid-area: logo;
-    img {height: 3em;}
+    padding: 0px 2.5em;
+    height: 5em;
+    background-size: 100% 100%;
+    display: inline-block;
+    /* grid-area: logo; */
+    img {height: 5em;}
   }
-  .player{grid-area: player;}
+  h3 {
+    padding-top: 0.5em;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  /* .player{grid-area: player;}
   .race{grid-area: race;}
   .rank{grid-area: rank;}
   h3{grid-area: name;}
-  h4{grid-area: motto;}
+  h4{grid-area: motto;} */
+}
 
-  margin: 10px;
-  text-align: left;
+.old_magnolia span.heraldry {
+  background-image: url("../images/heraldry/old_magnolia_support.svg");
+}
 
+.laurel_and_emeralds span.heraldry {
+  background-image: url("../images/heraldry/laurel_and_emeralds_support.svg");
+}
+
+.silver_shore span.heraldry {
+  background-image: url("../images/heraldry/silver_shore_support.svg");
+}
+
+.northern_light span.heraldry {
+  background-image: url("../images/heraldry/northern_light_support.svg");
+}
+
+.royal_house h3 {
+  background-image: url("../images/heraldry/royal_house.svg");
 }
 
 /* sets the height on the map */
