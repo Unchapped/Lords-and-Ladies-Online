@@ -526,12 +526,13 @@ div.highlight {background-color: rgba(0, 0, 0, 0.25);}
 
 #map_root.kingdom {
   .aerunost {
-    .land{fill: forestgreen; stroke: black;}
+    .land{fill: forestgreen; stroke: darkred;}
     use{color: gold;}
   }
 
   .old_magnolia {
-    .land{ fill: white; stroke: black;}
+    .land{ fill: #333333; stroke: white;}
+    text{fill: white;}
     use{color: black;}
   }
 

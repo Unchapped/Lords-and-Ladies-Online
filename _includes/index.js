@@ -196,8 +196,8 @@ function sortHouses(mode_name = "alpha_asc") {
     var last_group = "null";
     houses.forEach(function(house, index){
         if (!house.active || house[mode.key] == undefined) return;
-        if (mode.label && house[mode.label] != last_group) {
-            last_group = house[mode.label];
+        if (mode.label && sanitizeClassName(house[mode.label]) != last_group) {
+            last_group = sanitizeClassName(house[mode.label]);
             var content = '<div class="header ' + sanitizeClassName(house[mode.label]) + '"><h2>' + house[mode.label] + '</h2></div>';
             house_list.append(content);
         }
