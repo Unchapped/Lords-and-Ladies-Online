@@ -17,7 +17,7 @@ body {
   background-blend-mode: multiply;
 }
 
-h1, h2, h3 {
+h1, h2, h3{
   font-family: 'Cinzel', serif;
   text-transform: uppercase;
   margin: 0px;
@@ -28,7 +28,7 @@ h4, h5, h6 {
   margin: 0px;
 }
 
-h1 {font-size: 3em;}
+h2 {font-size: 1.5vw;}
 
 h4 {font-size: 1.5em;
   img {height: 1em;}
@@ -37,116 +37,14 @@ h4 {font-size: 1.5em;
 /* page layout classes */
 #menu_box {
   position: absolute;
-  top: 0px;
+  top: 34vw;
   right: 0px;
-  width: 38vw;
+  width: 30vw;
   text-align: center;
   padding: 1em;
-  &>div {
-    margin-top: 10px;
-    margin-left:auto;
-    margin-right:0;
-  }
-}
-
-path {
-    stroke:#000000;
-}
-
-body>svg {
-  width: 100%;
-
-  text {
-    font-family: 'Cinzel', serif;
-    font-size: 25px;
-    font-weight: bold;
-  }
-
-  g path {
-    stroke:#000000;
-    fill-opacity:0.75;
-    stroke-width: 0px;
-  }
-}  
-
-/* symbol colors */
-symbol path{
-  stroke-width: 5px;
-  stroke: black;
-}
-
-symbol#barrel path {fill: saddlebrown;}
-symbol#barrel path.lid {fill: saddlebrown;}
-symbol#barrel path.rings {fill: #555555;}
-symbol#castle path {fill: #555555;}
-symbol#castle path.flag {fill: currentColor;}
-symbol#crown path {fill: orange;}
-symbol#crown path.rim {fill: currentColor;}
-symbol#mountain path {fill: currentColor;}
-
-symbol#iron path {fill: #333333;}
-symbol#silver path {fill:silver;}
-symbol#silver path.handle {fill: currentColor;}
-symbol#gold path {fill: orange;}
-symbol#gold path.top {fill: yellow;}
-symbol#gems path {fill: currentColor;}
-
-symbol#oil path {fill:orange;}
-symbol#oil path.handle {fill: currentColor;}
-symbol#spices path {fill:darkgrey;}
-symbol#spices path.pestle {fill: dimgrey;}
-symbol#spices path.pile {fill: orangered;}
-symbol#wine path {fill: purple;}
-symbol#wine path.stem {fill: green;}
-symbol#pearls path {fill: papayawhip;}
-symbol#pearls path:nth-child(even) {fill: tan;}
-
-symbol#furs path {fill: chocolate;}
-
-symbol#textiles path {fill:currentColor;}
-symbol#textiles path.end {fill: dimgrey;}
-
-symbol#lumber path {fill: green;}
-symbol#lumber path.dark {fill: darkgreen;}
-
-/* basic map colors */
-.mountains {
-  fill:darkgrey;
-  stroke:darkgrey;
-  use {color: #333333}
-  use:nth-child(even) {color: #555555}
-}
-
-.sea {
-  fill:steelblue;
-  stroke:steelblue;
-}
-.river {   
-  fill:lightseagreen;
-  stroke:lightseagreen
-}
-.land {fill:darkkhaki}
-
-
-#map_key {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  h2 {grid-column: 1 / span 3;}
-  h4 {text-align: left;}
-
-}
-
-#trade_goods {
-  width: 35vw;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  /* grid-auto-flow: column; TODO: fix this */
-  h2 {grid-column: 1 / span 3;}
-  h4 {text-align: left;}
 }
 
 #noble_houses {
-  width: 30vw;
   .controls {
     padding: 5px;
     span {font-weight: bold}
@@ -165,15 +63,12 @@ symbol#lumber path.dark {fill: darkgreen;}
 
   }
   .list {
-    height: 70vw;
+    height: 62vw;
     overflow-x:hidden;
     overflow-y:auto;
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    div {
-      padding: 5px;
-      border-radius: 10px;
-    }
+    div {border-radius: 10px;}
   }
 }
 
@@ -183,6 +78,7 @@ symbol#lumber path.dark {fill: darkgreen;}
 
 .house {
   margin: 10px;
+  padding:0px;
   text-align: center;
   /* display: grid;
   grid-template-columns: auto 28% 28% 28%;
@@ -193,11 +89,11 @@ symbol#lumber path.dark {fill: darkgreen;}
 
   .heraldry {
     text-align: center;
-    padding: 0px 2.5em;
+    width: 100%;
+    padding: 0px;
     height: 5em;
     background-size: 100% 100%;
     display: inline-block;
-    /* grid-area: logo; */
     img {height: 5em;}
   }
   h3 {
@@ -206,11 +102,6 @@ symbol#lumber path.dark {fill: darkgreen;}
     background-repeat: no-repeat;
     background-position: center;
   }
-  /* .player{grid-area: player;}
-  .race{grid-area: race;}
-  .rank{grid-area: rank;}
-  h3{grid-area: name;}
-  h4{grid-area: motto;} */
 }
 
 .royal_house h3 {
